@@ -13,22 +13,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
 </head>
-
 <body>
     <!--Shapka-->
-    <header>
+    <header class="header">
     <a href="./index.html" class="logo link" >Web<span class="logo-element">Studio</span></a>
-    
     <nav>
-        <ul class="site-nav">
-            <li class="list"><a href="./index.html" class="link">Студия</a></li>
-            <li class="list"><a href="./portfolio.html" class="link">Портфолио</a></li>
-            <li class="list"><a href="" class="link">Контакты</a></li>
+        <ul class="list" class="site-nav">
+            <li><a class="link site-link" href="./index.html" class="link">Студия</a></li>
+            <li><a class="link site-link" href="./portfolio.html" class="link">Портфолио</a></li>
+            <li><a class="link site-link" href="" class="link">Контакты</a></li>
         </ul>
     </nav>
-        <ul class="contacts-nav">
-            <li class="list"><a class="link"  href="mailto:info@devstudio.com" >info@devstudio.com</a></li>
-            <li class="list"><a class="link"  href="tel:+0961111111" >+38 096 111 11 11</a></li>
+        <ul class="list" class="contacts-nav">
+            <li><a class="link contacts-link" href="mailto:info@devstudio.com" >info@devstudio.com</a></li>
+            <li><a class="link contacts-link" href="tel:+0961111111" >+38 096 111 11 11</a></li>
         </ul>
     </header>
     <!--Main-->
@@ -36,25 +34,26 @@
         <section class="hero">
         <h1 class="title-hero">Эффективные решения для вашего бизнеса</h1>
         <button class="btn" type="button">Заказать услугу</button>
+        
     </section>
     <!--Why we-->
         <section class="benefit">
             <h2 class="visually-hidden">Почему мы</h2>
-            <ul>
-                <li class="list">
+            <ul class="list">
+                <li>
                     <h3 class="title-list">Внимание к деталям</h3>
                     <p class="paragraph-benefit">Идейные соображения, а также начало повседневной работы по формированию позиции.
                     </p>
                 </li>
-                   <li class="list"><h3 class="title-list">Пунктуальность</h3>
+                   <li><h3 class="title-list">Пунктуальность</h3>
                     <p class="paragraph-benefit">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
                     </p></li>
-                <li class="list">
+                <li>
                     <h3 class="title-list">Планирование</h3>
                     <p  class="paragraph-benefit">Равным образом консультация с широким активом в значительной степени обуславливает.
                     </p>
                 </li>
-                <li class="list">
+                <li>
                     <h3 class="title-list">Современные технологии</h3>
                     <p class="paragraph-benefit">Значимость этих проблем настолько очевидна, что реализация плановых заданий.
                     </p>
@@ -63,36 +62,36 @@
         </section>
     <!--Чем мы занимаемся-->
         <section>
-            <h2 class="title-do-team">Чем мы занимаемся</h2>
-    <ul>
-        <li class="list"><img src="./images/img.jpg" alt="працівник пише код" width="370" height="294">
+            <h2 class="section-title">Чем мы занимаемся</h2>
+    <ul class="list">
+        <li><img src="./images/img.jpg" alt="працівник пише код" width="370" height="294">
         </li>
 
-        <li class="list"><img src="./images/box2.jpg" alt="працівник вибирає макет для смартфону" width="370" height="294">
+        <li><img src="./images/box2.jpg" alt="працівник вибирає макет для смартфону" width="370" height="294">
         </li>
 
-        <li class="list"><img src="./images/box3.jpg" alt="працівник обирає колір з палітри" width="370" height="294">
+        <li><img src="./images/box3.jpg" alt="працівник обирає колір з палітри" width="370" height="294">
         </li>
     </ul>
         </section>
 
     <!--Наша команда-->
     <section>
-        <h2 class="title-do-team">Наша команда</h2>
-        <ul>
-            <li class="list">
+        <h2 class="section-title">Наша команда</h2>
+        <ul class="list">
+            <li>
                 <img src="./images/designer.jpg" alt="Игорь Демьяненко" width="270" height="260"> 
             <h3 class="title-team">Игорь Демьяненко</h3><p lang="en" class="team-paragraph">Product Designer</p>
             </li>
-            <li class="list">
+            <li>
                 <img src="./images/developer.jpg" alt="Ольга Репина" width="270" height="260">
             <h3 class="title-team">Ольга Репина</h3><p lang="en" class="team-paragraph">Developer</p>
             </li>
-            <li class="list">
+            <li>
                 <img src="./images/marketing.jpg" alt="Николай Тарасов" width="270" height="260">
              <h3 class="title-team">Николай Тарасов</h3><p lang="en" class="team-paragraph">Marketing</p> 
             </li>
-            <li class="list">
+            <li>
                 <img src="./images/designer1.jpg" alt="Михаил Ермаков" width="270" height="260">
             <h3 class="title-team">Михаил Ермаков</h3><p lang="en" class="team-paragraph">Designer</p>
           </li>
@@ -102,11 +101,11 @@
     <!--Підвал-->
     <footer class="footer-section">
         <a class="logo link" href="./index.html">Web<span class="footer-logo">Studio</span></a>
-    <address>
-        <ul class="address-list">
-            <li class="list"><a class="link" href="https://goo.gl/maps/Wb2JKnAjsDDSmUvE6" target="_blank" rel="noreferrer noopener"> <span class="coordinates">г. Киев, пр-т Леси Украинки, 26</span></a></li> 
-            <li class="list"><a class="link" href="mailto:info@example.com">info@example.com</a></li>
-            <li class="list"><a class="link" href="tel:+0961111111">+38 096 111 11 11</a></li>
+    <address class="address-section">
+        <ul class="list" class="address-list">
+            <li><a class="link address-link" href="https://goo.gl/maps/Wb2JKnAjsDDSmUvE6" target="_blank" rel="noreferrer noopener">г. Киев, пр-т Леси Украинки, 26</a></li> 
+            <li><a class="link address-link" href="mailto:info@example.com">info@example.com</a></li>
+            <li><a class="link address-link" href="tel:+0961111111">+38 096 111 11 11</a></li>
         </ul>
     </address>
     </footer>

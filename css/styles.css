@@ -3,7 +3,8 @@
    --second-color: #212121;
    --white-color: #FFFFFF;
    --main-color: #757575;
-   --active-color: #2196F3
+   --active-color: #2196F3;
+   --background-color: #2F303A;
  }
 
  body {
@@ -25,8 +26,6 @@
    list-style: none; 
 }
 
-
-
  /* LOGO */
  a.logo {
     font-family: Raleway;
@@ -42,35 +41,30 @@
 
 
 /* HEADER */
- .site-nav {
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-   color: var(--second-color);
-    
- }
- .site-nav :hover, a:focus { 
-   color: var(--active-color);
- }
 
- .contacts-nav :hover, a:focus {
-    color: var(--active-color); 
- }
- .contacts-nav  {
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-   color: var(--second-color);
- }
+.header {
+   font-weight: 500;
+   line-height: 1.14;
+   letter-spacing: 0.02em;
+   color: var(--second-color)
+}
+.contacts-link {
+color: var(--main-color);
+}
+
+.contacts-link:hover,:focus,
+.site-link:hover,:focus {
+      color: var(--active-color); }
+
+
 
  /*  hero */
   .hero { 
    text-align: center;
-   background-color: #2F303A;
+   background-color: var(--background-color)
  } 
 
  .title-hero {
-
    letter-spacing: 0.06em;
    text-transform: uppercase;
    font-size: 44px;
@@ -81,6 +75,7 @@
 
  .btn
  {
+font-family: inherit;
 font-weight: 700;
 font-size: 16px;
 line-height: 1.87;
@@ -94,6 +89,7 @@ cursor: pointer;
 .btn:focus, .btn:active { 
 background-color: #188CE8;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+color: var(--white-color);
 border-radius: 4px;}
 
 /* benefit*/
@@ -124,7 +120,7 @@ border-radius: 4px;}
 
 /* what we do */
 
-.title-do-team {
+.section-title {
    font-weight: 700;
    font-size: 36px;
    line-height: 1.16;
@@ -155,40 +151,45 @@ border-radius: 4px;}
 /* footer */
 
 .footer-section {
-   background-color: #2F303A;
+   background-color: var(--background-color)
 }
 .footer-logo {
    color: var(--white-color);
 }
 
-.address-list :hover, :focus {
+.address-section {
+   font-style: inherit;
+}
+.address-link {
+   color:rgba(255, 255, 255, 0.6);
+}
+.address-link:hover,:focus,
+.address-link[target="_blank"]:hover, 
+.address-link[target="_blank"]:focus {
    color: var(--active-color);
-
 }
-
-.coordinates {
-   color: var(--white-color);
-   font-style: normal;
+.address-link[target="_blank"] {
+ color: var(--white-color);
 }
-
-
 
 /* buttons */
 
-.portfolio-btn button {
+.portfolio-btn {
+   font-family: inherit;
    font-weight: 500;
-      font-size: 16px;
-      line-height: 1.62;
-      text-align: center;
-      letter-spacing: 0.03em;
-      background: #F5F4FA;
-      border-radius: 4;
-      border: 0px;
-      cursor: pointer;
+   font-size: 16px;
+   line-height: 1.62;
+   text-align: center;
+   letter-spacing: 0.03em;
+   background: #F5F4FA;
+   border-radius: 4px;
+   border: 0px;
+   cursor: pointer;
 }
-.portfolio-btn button:focus,
-.portfolio-btn button:active,
-.portfolio-btn button:hover {
+
+.portfolio-btn:hover,
+.portfolio-btn:focus,
+.portfolio-btn:active {
    background-color: var(--active-color);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
    border-radius: 4px;
