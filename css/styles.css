@@ -224,7 +224,7 @@ color: var(--second-color);
 
     /*    HW#3 */
 
-.container {
+.main-container {
    
    width: 1200px;
    margin-left: auto;
@@ -387,3 +387,61 @@ margin-right: 0px;
 .address-list li {
    margin-bottom: 9px;
 }
+
+
+
+/* portfolio */
+.portfolio-container {
+   width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.btn-list {
+   width: 611px;
+   height: 54px;
+   display: flex;
+   justify-content: center;
+   margin-top: 94px;
+   margin-left: 495px;
+   margin-right: 494px;
+   margin-bottom: 34px;
+   padding-left: 0px;
+
+}
+
+.btn-list li {
+   padding-right: 8px;
+   margin: 0px;
+   
+   
+}
+.portfolio-btn {
+   padding-left: 22px;
+   padding-right: 22px;
+   padding-top: 6px;
+   padding-bottom: 6px;
+}
+
+.portfolio-list {
+   width: 1200px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-bottom: 30px;
+   margin-right: 30px;
+   padding: auto;
+}
+
+.portfolio-list li {
+   width: 370px;
+   height: 404px;
+   border: 1px solid #EEEEEE;
+   margin-bottom: 30px;
+   margin-right: 30px;
+}
+
+.portfolio-list li:nth-child(3n+3) {
+   margin-right: 0px;
+}
+
