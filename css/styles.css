@@ -88,6 +88,8 @@ text-align: center;
 background-color: var(--active-color);
 color: var(--white-color);
 cursor: pointer;
+border: none;
+border-radius: 4px;
 }
 
 .btn:focus, .btn:active { 
@@ -116,6 +118,7 @@ border-radius: 4px;}
    line-height: 1.14;
    text-transform: uppercase;
    color: var(--second-color);
+   margin-bottom: 10px;
 }
 
 
@@ -168,14 +171,14 @@ line-height: 1.18;
 }
 .address-link color:rgba(255, 255, 255, 0.6);
 
-.address-link:hover,:focus,
-.address-link[target="_blank"]:hover, 
-.address-link[target="_blank"]:focus {
-   color: var(--active-color);
-}
 .address-link[target="_blank"] {
 color: var(--white-color);
 }
+
+.address-link:hover, :focus {
+   color: var(--active-color);
+}
+
 
 /* buttons */
 
@@ -222,128 +225,134 @@ color: var(--second-color);
 
 
 
-    /*    HW#3 */
-
-.main-container {
-   
-   width: 1200px;
-   margin-left: auto;
-   margin-right: auto;
+                /*    HW#3 */
+ul, 
+p, 
+h1, 
+h2, 
+h3 {
+   margin: 0px;
+   padding: 0px;
 }
 
-
-
-
-/* header */
-
-
-
-.header {
-   margin: auto;
+.container-header {
+   width: 1200px;
+   padding-left: 15px;
+   padding-right: 15px;
    display: flex;
    justify-content: space-between;
    align-items: center;
+   margin-left: 200px;
+   
 }
-.logo {
-   width: 145px;
-   height: 31px;
-   padding-right: 93px;
-   margin-right: 0px;
-   margin-top: 24px;
-   margin-bottom: 25px;
-}
-.site-nav{
-   padding: 0px;
-   width: 294px;
-   height: 15px;
+.hero {
    display: flex;
-   justify-content: space-between;
-   margin-top: 32px;
-   margin-bottom: 32px;
-   margin-right: 331px;
-   margin-left: 0px;
-}
-
-.site-nav .item {
-   margin-right: 50px;
-}
-.site-nav .item:last-child {
-margin-right: 0px;
-}
-.contacts-nav {
-   padding: 0px;
-   display: flex;
-   justify-content: space-between;
-   margin-top: 32px;
-   margin-bottom: 32px;
-}
-.contacts-nav .item + .item {
-   margin-left: 50px;
-}
-
-
-
-
-
-.container-hero {
    width: 1600px;
    height: 600px;
-   margin-right: auto;
-   margin-left: auto;
+   padding-top: 200px;
+   padding-bottom: 200px;
    align-items: center;
-   justify-content: space-between;
-   justify-content: center;
-   text-align: center;
-   align-content: center;
+   margin-bottom: 90px;
+}
+.container {
+   width: 1200px;
+   padding-left: 15px;
+   padding-right: 15px;
+   
+   padding-bottom: 94px;
+   margin-left: 200px;
+}
+
+.footer-section {
+   width: 1600px;
+   height: 252px;
+}
+                  /* header */ 
+.site-nav{
+   display: flex;
+   align-items: center;
+
+}
+.site-nav .item:not(:last-child) {
+   margin-right: 50px;
+}
+
+.contacts-nav {
+   display: flex;
+   align-items: center;
+}
+.contacts-nav .item:not(:last-child) {
+   margin-right: 50px;
 } 
 
+.site-link, .contacts-link {
+   display: flex;
+   text-align: center;
+   padding-top: 32px;
+   padding-bottom: 32px;
+}
+
+/*hero*/
 
 .title-hero {
-   padding: 200px 452px 30px 452px;
-}
-.btn {
-   margin: 30px 700px 200px 700px;
+   max-width: 696px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 30px;
    
 }
+.btn{
+   margin: auto;
+   padding: 10px 32px 10px 32px;
+}
+
+
+
+
+/*benefits*/
 
 .list-benefits {
-   text-align: left;
-   width: 1170px;
-   height: 101px;
-   align-items: center;
    display: flex;
    justify-content: space-between;
-   margin-top: 94px;
-   margin-bottom: 94px;
-   padding-left: 0px;
-   }
-
+   margin-left: auto;
+   margin-right: auto;
+}
 .list-benefits li {
-      margin-right: 30px;
-      width: 270px;
-      height: 101px;
+   width: 270px;
+   height: 101px;
+   flex-basis: calc(100% / 4) ;
+   margin-right: 30px;
    }
 .list-benefits li:last-child {
    margin-right: 0px;
+} 
+
+/*work*/
+.section-title {
+   margin-bottom: 50px;
 }
 .list-photo {
-   padding-left: 0px;
    display: flex;
-   margin-bottom: 94px;
    justify-content: space-between;
-}
-.list-photo li {
    
+}
+.list-photo .item {
+   flex-basis: calc(100%/3);
    margin-right: 30px;
 }
-.list-photo li:last-child {
+.list-photo .item:last-child {
    margin-right: 0px;
+}
+/*team*/
+.section-team {
+   width: 1600px;
+   display: inline-block;
 }
 .list-team {
    display: flex;
-   padding-left: 0px;
+   justify-content: space-between;
 }
-.list-team li {
+.list-team .item {
    width: 270px;
    height: 368px;
    text-align: center;
@@ -351,71 +360,63 @@ margin-right: 0px;
    0px 1px 1px rgba(0, 0, 0, 0.14), 
    0px 2px 1px rgba(0, 0, 0, 0.2);
    border-radius: 0px 0px 4px 4px;
-   justify-content: space-between;
-   padding-right: 30px;
+   flex-basis: calc(100%/4);
+   margin-right: 30px;
 }
-.list-team li :last-child {
+.list-team .item :last-child {
    margin-right: 0px;
 }
-.section-team {
-   
-   margin-bottom: 94px;
-   margin-top: 94px;
+.list-team .title-team, .list-team .team-paragraph {
+   margin-top: 20px;
+   margin-bottom: 10px;
 }
+/*footer*/
 
-.footer-section {
-   
-   width: 1600px;
-   height: 252px;
-}
 
-.address-logo {
-   display: inline-block;
-   width: 145px;
-   height: 31px;
-   padding: 60px 1240px 20px 0px;
+.footer-list {
+   padding-top: 60px;
+   padding-left: 215px;
 } 
-.address-list {
-   width: 231px;
-   height: 81px;
-   margin: 0px;
-   padding-top: 0px;
-   padding-left: 0px;
-   padding-bottom: 60px;
-}
 
-.address-list li {
-   margin-bottom: 9px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /* portfolio */
-.portfolio-container {
-   width: 1200px;
-   margin-left: auto;
-   margin-right: auto;
-}
 
+
+
+/* BUTTONS */
 .btn-list {
-   width: 611px;
-   height: 54px;
    display: flex;
    justify-content: center;
-   margin-top: 94px;
-   margin-left: 495px;
-   margin-right: 494px;
    margin-bottom: 34px;
-   padding-left: 0px;
-
+   margin-top: 94px;
 }
-
 .btn-list li {
    padding-right: 8px;
    margin: 0px;
-   
-   
 }
+
 .portfolio-btn {
    padding-left: 22px;
    padding-right: 22px;
@@ -423,14 +424,11 @@ margin-right: 0px;
    padding-bottom: 6px;
 }
 
+/* our service */
 .portfolio-list {
-   width: 1200px;
    display: flex;
    flex-wrap: wrap;
-   justify-content: center;
-   margin-bottom: 30px;
-   margin-right: 30px;
-   padding: auto;
+
 }
 
 .portfolio-list li {
@@ -440,7 +438,13 @@ margin-right: 0px;
    margin-bottom: 30px;
    margin-right: 30px;
 }
-
+.portfolio-list h2  {
+margin-left: 24px;
+margin-top: 20px;
+}
+.portfolio-list p {
+   margin-left: 24px;
+}
 .portfolio-list li:nth-child(3n+3) {
    margin-right: 0px;
 }
