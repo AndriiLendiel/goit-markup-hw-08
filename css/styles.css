@@ -267,10 +267,11 @@ li {
    margin: 0px;
    padding: 0px;
 }
-.img {
+img {
    display: block;
+   max-width: 100%;
+   height: auto;
 }
-
 .container {
    width: 1200px;
    padding-left: 15px;
@@ -288,7 +289,9 @@ li {
    padding-top: 94px;
    padding-bottom: 94px;
 }
-
+.section-work {
+   padding-bottom: 94px;
+}
                   /* header */ 
 .logo {
    margin-right: 93px;
@@ -418,6 +421,8 @@ li {
    margin-right: 30px;
    flex-basis: ((100% - 90px)/3);
 }
+
+
 
 .text {
    padding: 20px 24px;
