@@ -291,7 +291,7 @@ img {
 }
 
 .contacts-nav {
-   display: flex;
+   display:flex;
    align-items: center;
    margin-left: auto;
 }
@@ -383,3 +383,68 @@ img {
 }
 
 
+/*                   HW#4 */
+.container-hero {
+   width: 1600px;
+   height: 600px;
+   background-image: url("/gt_02/images/hero-bg.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   background-attachment: scroll;
+}
+
+
+
+
+
+.antenna-item::before, 
+.clock-item::before, 
+.diagram-item::before, 
+.astronaut-item::before {
+   display: inline-block;
+   width: 100%;
+   height: 120px;
+   margin-bottom: 30px;
+   background-color: #E5E5E5;
+   content: "" ;
+   background-repeat: no-repeat;
+   background-position: center;
+   cursor: pointer;
+   
+}
+.antenna-item::before {
+   background-image: url(../images/icons.svg/antenna.svg);
+}
+.clock-item::before {
+   background-image: url(../images/icons.svg/clock.svg);
+}
+.diagram-item::before {
+   background-image: url(../images/icons.svg/diagram.svg);
+}
+.astronaut-item::before {
+   background-image: url(../images/icons.svg/astronaut.svg);
+}
+/*
+.antenna-item:hover::before  {
+   background-color: var(--active-color);
+}
+*/
+
+.envelope-item::before, .smartphone-item::before {
+   display: inline-block;
+   width: 16px;
+   height: 12px;
+   margin-right: 10px;
+   content: '' ;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+
+.envelope-item::before {
+   background-image: url(../images/icons.svg/envelope.svg);
+}
+.smartphone-item::before {
+   background-image: url(../images/icons.svg/smartphone.svg);
+}
