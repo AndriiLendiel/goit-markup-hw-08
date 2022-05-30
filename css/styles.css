@@ -88,7 +88,6 @@ display: inline-flex;
 color: var(--active-color); 
 } 
 .icon-header {
-   align-items: center;
    fill: currentColor;
    margin-right: 10px;
 }
@@ -111,8 +110,8 @@ color: var(--active-color);
    margin-right: 50px;
 } 
 .site-link, .contacts-link {
-   display: inline-flex;
-   text-align: center;
+   display: flex;
+   align-items: center;
    padding-top: 32px;
    padding-bottom: 32px;
 }
