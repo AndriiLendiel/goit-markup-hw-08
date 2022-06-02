@@ -48,8 +48,7 @@
                     <a class="link contacts-link" href="tel:+0961111111"><svg class="icon-header" width="10"
                             height="16">
                             <use href="./images/icons.svg/symbol-defs1.svg#icon-smartphone"></use>
-                        </svg> +38 096 111 11
-                        11 </a>
+                        </svg>+38 096 111 1111 </a>
                 </li>
             </ul>
         </div>
@@ -59,7 +58,19 @@
         <section class="hero">
             <div class="container container-hero">
                 <h1 class="title-hero">Эффективные решения для вашего бизнеса</h1>
-                <button class="btn" type="button">Заказать услугу</button>
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal">
+                        <button class="modal-btn" data-modal-close type="button">Close [X]</button>
+                        <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, officia.
+                            Excepturi dolore
+                            natus laboriosam expedita officia numquam ad, dolor quas sit consequuntur ab nemo neque cum
+                            vel modi. Molestiae, eveniet. Ullam at incidunt temporibus officiis! Iure ratione
+                            perferendis iusto libero consequuntur eveniet quod in vel a cum dolor unde possimus, quidem
+                            optio veniam nihil. Rerum delectus molestias porro quidem libero ab excepturi, assumenda
+                            optio natus maiores, ipsa cumque dolores aperiam repudiandae dolorem eum tenetur ea.</p>
+                    </div>
+                </div>
+                <button class="btn" data-modal-open type="button">Заказать услугу</button>
             </div>
         </section>
         <!--Why we-->
@@ -448,6 +459,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

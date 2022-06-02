@@ -79,6 +79,29 @@ color: var(--active-color);
 .contacts-link {
 color: var(--main-color);
 display: inline-flex;
+position: relative;
+}
+
+.site-link::after {
+   content: "";
+   width: 100%;
+   height: 4px;
+   border-left: 100%;
+   border-right: 100%;
+   background-color: var(--active-color);
+   position: absolute;
+   left: 0px;
+   bottom: 0px;
+   transform-origin: left;
+   transform: scale(0);
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition: transform;
+   transition-duration: 250ms;
+}
+
+.site-link:hover::after {
+   transform-origin: to right;
+   transform: scale(1);
 }
 .contacts-link:hover,
 .site-link:hover,
@@ -90,6 +113,9 @@ color: var(--active-color);
 .icon-header {
    fill: currentColor;
    margin-right: 10px;
+   transition-property: position;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header .logo {
    margin-right: 93px;
@@ -110,10 +136,15 @@ color: var(--active-color);
    margin-right: 50px;
 } 
 .site-link, .contacts-link {
+   position: relative;
    display: flex;
    align-items: center;
    padding-top: 32px;
    padding-bottom: 32px;
+   transition-property: color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   overflow: hidden;
 }
  /*  ===============================================================hero */
 .hero { 
@@ -158,12 +189,62 @@ color: var(--active-color);
    border-radius: 4px;
    margin: auto;
    padding: 10px 32px 10px 32px;
+   transition-property: transform;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .btn:focus, .btn:active { 
    background-color: #188CE8;
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
    color: var(--white-color);
    border-radius: 4px;}
+
+
+.backdrop {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(100, 150, 156, 0.2);
+   opacity: 1;
+   transition: opacity, transform 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+   transform: rotate(0deg);
+}
+
+.backdrop.is-hidden {
+   opacity: 0;
+   pointer-events: none;
+   transform: rotate(360deg);
+}
+
+.modal {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: 400px;
+   height: 300px;
+   background-color: var(--active-color);
+}
+
+.modal-btn {
+   position: absolute;
+   right: 0%;
+   min-width: 60px;
+   border: transparent;
+   border-radius: 4px;
+   opacity: 0.5;
+}
+
+.modal-text {
+   display: block;
+   text-align: center;
+   padding: 20px;
+   color: var(--white-color);
+   
+}
 /*============================================================== benefit*/
 .visually-hidden {
    position: absolute;
@@ -239,7 +320,11 @@ margin-bottom: 16px;
    height: 44px;
    border-radius: 100%;
    margin-right: 10px;
+   transform: scale(1) rotate(0);
    background: rgba(255, 255, 255, 0.1);
+   transition-property: fiil background-color scale, rotate;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-item:last-child {
    margin-right: 0px;
@@ -252,10 +337,12 @@ margin-bottom: 16px;
 .social-link:hover,
 .social-link:focus {
    background-color: var(--active-color);
+   transform: scale(1.6) rotate(360deg);
 }
 .social-link:hover .social-logo,
 .social-link:focus .social-logo {
    fill: var(--white-color);
+
 }
 /*=====================================================================PERMANENT CLIENTS */
 .client-item {
@@ -268,6 +355,10 @@ margin-bottom: 16px;
    border-radius: 4px;
    justify-content: center;
    align-items: center;
+   transform: scale(1);
+   transition-property: transform;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .client-item:last-child .partner-back {
 margin-right: 0px;
@@ -281,6 +372,8 @@ margin-right: 0px;
    color: var(--active-color);
    border: var(--active-color) 1px solid;
    border-radius: 4px;
+   border-color: transparent;
+   transform: scale(2);
 }
 /* ============================================================================footer */
 .footer-section {
@@ -381,6 +474,35 @@ color: var(--second-color);
 }
 .portfolio-link {
    display: block;
+   position: relative;
+}
+
+.thumb{
+   width: 100%;
+   position: relative;
+   overflow: hidden;
+}
+
+.active-text {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   text-align:center;
+   background-color: var(--active-color);
+   opacity: 0;
+   position: absolute;
+   top: 100%;
+   color: var(--white-color);
+   align-items: center;
+   transition: opacity, top;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-link:hover .active-text,
+.portfolio-link:focus .active-text {
+      opacity: 0.75;
+      top: 0%;
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -398,7 +520,7 @@ color: var(--second-color);
 .card-item {
    margin-left: 30px;
    margin-top: 30px;
-   flex-basis: calc(100% / 4 - 30px);
+
 }
 .item-benefits {
    flex-basis: calc(100% / 4 - 30px);
