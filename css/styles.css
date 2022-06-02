@@ -215,7 +215,7 @@ color: var(--active-color);
 
 .backdrop.is-hidden {
    opacity: 0;
-   pointer-events: none;а
+   pointer-events: none;
    transform: rotate(360deg);
 }
 
@@ -292,6 +292,22 @@ color: var(--active-color);
    padding: 20px 24px;
    border: 1px solid #EEEEEE;
    border-top: none;
+}
+
+.work-thumb {
+   position: relative;
+
+}
+
+.work-test {
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0%;
+   color: var(--white-color);
+   background-color: var(--active-color);
+   opacity: 0.75;
 }
 /*====================================================================== our team */
 .section-team {
