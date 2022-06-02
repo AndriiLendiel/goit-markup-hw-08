@@ -215,7 +215,7 @@ color: var(--active-color);
 
 .backdrop.is-hidden {
    opacity: 0;
-   pointer-events: none;
+   pointer-events: none;а
    transform: rotate(360deg);
 }
 
@@ -394,7 +394,8 @@ margin-right: 0px;
 .address-link[target="_blank"] {
    color: var(--white-color);
 }
-.address-link:hover, :focus {
+.address-link:hover, 
+.addres-link:focus {
    color: var(--active-color);
 }
 .footer-item .logo {
