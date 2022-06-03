@@ -83,31 +83,36 @@ display: inline-flex;
 
 .site-link::after {
    content: "";
+   display: block;
    width: 100%;
    height: 4px;
    border-radius: 1px;
    background-color: var(--active-color);
    position: absolute;
    left: 0px;
-   bottom: 0px;
+   bottom: -1px;
    transform-origin: left;
    transform: scale(0);
+   transition: transform 500ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-   transition-property: transform;
-   transition-duration: 250ms;
-}
+} 
 
-.site-link:hover::after {
+
+
+.site-link:hover::after
+.site-link:focus::after {
    transform-origin: to right;
    transform: scale(1);
 
 }
 .site-link, .contacts-link {
    position: relative;
-   display: flex;
    align-items: center;
    padding-top: 32px;
    padding-bottom: 32px;
+   transition-property: color;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   transition-duration: 250ms;
 }
 .contacts-link:hover,
 .site-link:hover,
@@ -218,8 +223,8 @@ color: var(--active-color);
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%);
-   width: 400px;
-   height: 300px;
+   width: 528px;
+   height: 581px;
    background-color: var(--active-color);
 }
 
@@ -294,14 +299,18 @@ color: var(--active-color);
 }
 
 .work-test {
-   display: block;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    width: 100%;
-   height: 100%;
+   height: 70px;
    position: absolute;
-   top: 0%;
+   bottom: 0%;
+   font-weight: 700;
+   line-height: 1.14;
+   text-transform: uppercase;
    color: var(--white-color);
-   background-color: var(--active-color);
-   opacity: 0.75;
+   background: rgba(47, 48, 58, 0.8);;
 }
 /*====================================================================== our team */
 .section-team {
@@ -332,7 +341,7 @@ margin-bottom: 16px;
    margin-right: 10px;
    transform: scale(1) rotate(0);
    background: rgba(255, 255, 255, 0.1);
-   transition-property: fiil background-color scale, rotate;
+   transition-property:background-color transform;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -343,6 +352,7 @@ margin-bottom: 16px;
    fill: var(--icon-color);
    display: flex;
    align-items: center;
+   transition-property: fill;
 }
 .social-link:hover,
 .social-link:focus {
@@ -362,11 +372,12 @@ margin-bottom: 16px;
    display: flex;
    height: 92px;
    border: var(--icon-color) 1px solid;
+   outline: none;
    border-radius: 4px;
    justify-content: center;
    align-items: center;
    transform: scale(1);
-   transition-property: transform;
+   transition-property: transform, color, border-radius, border-color;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
@@ -406,7 +417,7 @@ margin-right: 0px;
    color: var(--white-color);
 }
 .address-link:hover, 
-.addres-link:focus {
+.address-link:focus {
    color: var(--active-color);
 }
 .footer-item .logo {
@@ -447,6 +458,9 @@ margin-right: 0px;
    border-radius: 4px;
    border: 0px;
    cursor: pointer;
+   transition-property: background-color, box-shadow, border-radius, color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus,
@@ -487,6 +501,7 @@ color: var(--second-color);
 .portfolio-link {
    display: block;
    position: relative;
+   transition-property: box-shadow;
 }
 
 .thumb{
@@ -499,14 +514,17 @@ color: var(--second-color);
    display: flex;
    width: 100%;
    height: 100%;
+   padding: 24px;
    text-align:center;
+   font-size: 18px;
+   line-height: 1.55;
    background-color: var(--active-color);
    opacity: 0;
    position: absolute;
    top: 100%;
    color: var(--white-color);
    align-items: center;
-   transition: opacity, top;
+   transition-property: opacity, top;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
