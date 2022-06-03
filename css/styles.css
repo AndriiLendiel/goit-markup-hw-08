@@ -81,25 +81,29 @@ color: var(--main-color);
 display: inline-flex;
 }
 
+
+
 .site-link::after {
-   content: "";
    display: block;
+   content: "";
    width: 100%;
    height: 4px;
-   border-radius: 1px;
+   border-radius: 5px;
    background-color: var(--active-color);
    position: absolute;
    left: 0px;
    bottom: -1px;
    transform-origin: left;
    transform: scale(0);
-   transition: transform 500ms;
+   transition-property: transform, color;
+   transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 } 
 
 
 
-.site-link:hover::after
+.site-link:hover::after,
 .site-link:focus::after {
    transform-origin: to right;
    transform: scale(1);
@@ -110,7 +114,7 @@ display: inline-flex;
    align-items: center;
    padding-top: 32px;
    padding-bottom: 32px;
-   transition-property: color;
+   transition-property: color, transform;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    transition-duration: 250ms;
 }
