@@ -229,16 +229,32 @@ color: var(--active-color);
    transform: translate(-50%, -50%);
    width: 528px;
    height: 581px;
-   background-color: var(--active-color);
+   background-color: var(--white-color);
+   color: var(--second-color);
 }
+.x-logo {
+   fill: var(--second-color);
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background: var(--white-color);
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   transition-property: fill;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+.x-logo:hover,
+.x-logo:focus {
+   fill: var(--active-color);
+}
 .modal-btn {
    position: absolute;
    right: 0%;
    min-width: 60px;
    border: transparent;
    border-radius: 4px;
-   opacity: 0.5;
+   background-color: transparent;
 }
 
 .modal-text {
@@ -248,6 +264,135 @@ color: var(--active-color);
    color: var(--white-color);
    
 }
+
+.form {
+   width: 100%;
+   height: 100%;
+   padding: 40px;
+   margin: auto;
+}
+.form-field {
+   position: relative;
+   margin-bottom: 10px;
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   font-size: 12px;
+   line-height: 1.16;
+   letter-spacing: 0.01em;
+   color: var(--main-color);
+   transition-property: color, fill, border-color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.form-field input {
+height: 40px;
+}
+.form-field input,
+.form-field textarea {
+   display: block;
+   margin: 0px;
+   padding: 0px;
+   width: 100%;
+   border-radius: 4px;
+   border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.modal-title {
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 1.15;
+   text-align: center;
+   color: var(--second-color);
+   margin-bottom: 12px;
+}
+
+.form-field .textarea {
+   resize: none;
+   margin-top: 4px;
+}
+
+
+.policy {
+   display: flex;
+}
+
+.form-footer input[type='checkbox'] {
+width: 16px;
+height: 15px;
+margin-right: 8px;
+}
+.form-footer {
+   position: relative;
+   margin-bottom: 20px;
+   text-align: left;
+   font-size: 14px;
+   line-height: 1.71;
+   color: var(--main-color);
+   display: flex;
+   justify-content: start;
+   align-items: baseline;
+   margin-top: 20px;
+   margin-bottom: 30px;
+}
+
+.form-btn {
+   margin-bottom: 40px;
+}
+
+
+.form-logo {
+   fill: var(--second-color);
+   position: absolute;
+   bottom: 10px;
+   left: 12px;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'] {
+   padding-left: 42px;
+}
+
+/* .form-field:hover input,
+.form-field:hover .form-logo {
+   color: var(--active-color);
+   fill: var(--active-color);
+   border-color: var(--active-color);
+} */
+.form-field:focus-within .form-logo,
+.form-field:focus-within .form-input
+{
+   color: var(--active-color);
+   fill: var(--active-color);
+   border-color: var(--active-color);
+   outline: transparent;
+}
+
+.checkbox {
+   appearance: none;
+   position: absolute;
+}
+.new-checkbox {  
+   display: block;
+   width: 16px;
+   height: 15px;
+   border: var(--second-color) 2px solid;
+   border-radius: 4px;
+   margin-right: 8px;
+   transition-property: color, fill, border-color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.checkbox:checked + .new-checkbox {
+   background-color: var(--active-color);
+   background-image: url(/gt_02/images/icons.svg/Vector\ \(1\).svg);
+   background-repeat: no-repeat;
+   background-size: contain;
+   border-color: transparent;
+   background-position: center;
+}
+
 /*============================================================== benefit*/
 .visually-hidden {
    position: absolute;
@@ -302,14 +447,17 @@ color: var(--active-color);
 
 }
 
-.work-test {
+.work-text {
    display: flex;
    justify-content: center;
    align-items: center;
+   text-align: center;
    width: 100%;
-   height: 70px;
+
+   padding: 27px;
    position: absolute;
    bottom: 0%;
+   font-size: 14px;
    font-weight: 700;
    line-height: 1.14;
    text-transform: uppercase;
@@ -345,7 +493,7 @@ margin-bottom: 16px;
    margin-right: 10px;
    transform: scale(1) rotate(0);
    background: rgba(255, 255, 255, 0.1);
-   transition-property:background-color transform;
+   transition-property:background-color, transform;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -354,9 +502,10 @@ margin-bottom: 16px;
 }
 .social-logo {
    fill: var(--icon-color);
-   display: flex;
    align-items: center;
    transition-property: fill;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
@@ -415,6 +564,9 @@ margin-right: 0px;
 }
 .address-link {
    color:rgba(255, 255, 255, 0.6);
+   transition-property: color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link[target="_blank"] {
 
@@ -450,8 +602,39 @@ margin-right: 0px;
 .footer-section .social-logo {
    fill: var(--white-color);
 }
+
+.footer-form input {
+   width: 358px;
+   height: 50px;
+   background-color: transparent;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+   border-radius: 4px;
+   font-size: 16px;
+   line-height: 1.25;   
+   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-btn {
+   display: inline-flex;
+   align-items: center;
+   margin-left: 12px;
+}
+
+.footer-logo {
+   margin-left: 10px;
+   fill: currentColor;
+}
+
+.input-mail input[type='email'] {
+padding-left: 12px;
+}
 /*======================================================================= buttons */
 .portfolio-btn {
+   padding-left: 22px;
+   padding-right: 22px;
+   padding-top: 6px;
+   padding-bottom: 6px;
    font-family: inherit;
    font-weight: 500;
    font-size: 16px;
@@ -462,7 +645,7 @@ margin-right: 0px;
    border-radius: 4px;
    border: 0px;
    cursor: pointer;
-   transition-property: background-color, box-shadow, border-radius, color;
+   transition-property: background-color, box-shadow, color;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -471,7 +654,6 @@ margin-right: 0px;
 .portfolio-btn:active {
    background-color: var(--active-color);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-   border-radius: 4px;
    color: var(--white-color);
 }
 .btn-list {
@@ -481,12 +663,6 @@ margin-right: 0px;
 }
 .btn-list .item {
    margin-right: 8px;
-}
-.portfolio-btn {
-   padding-left: 22px;
-   padding-right: 22px;
-   padding-top: 6px;
-   padding-bottom: 6px;
 }
  /* ================================================================PORTFOLIO */
 .title-service {
@@ -506,6 +682,8 @@ color: var(--second-color);
    display: block;
    position: relative;
    transition-property: box-shadow;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .thumb{
@@ -579,3 +757,4 @@ color: var(--second-color);
 .title-team {
    margin-bottom: 10px;
 }
+

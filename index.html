@@ -60,14 +60,51 @@
                 <h1 class="title-hero">Эффективные решения для вашего бизнеса</h1>
                 <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
-                        <button class="modal-btn" data-modal-close type="button">Close [X]</button>
-                        <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, officia.
-                            Excepturi dolore
-                            natus laboriosam expedita officia numquam ad, dolor quas sit consequuntur ab nemo neque cum
-                            vel modi. Molestiae, eveniet. Ullam at incidunt temporibus officiis! Iure ratione
-                            perferendis iusto libero consequuntur eveniet quod in vel a cum dolor unde possimus, quidem
-                            optio veniam nihil. Rerum delectus molestias porro quidem libero ab excepturi, assumenda
-                            optio natus maiores, ipsa cumque dolores aperiam repudiandae dolorem eum tenetur ea.</p>
+                        <button class="modal-btn" data-modal-close type="button"><svg class="x-logo" width="18"
+                                height="18">
+                                <use href="./images/icons.svg/symbol-defs6.svg#icon-X">
+
+                                </use>
+                            </svg></button>
+                        <form action="" class="form">
+
+                            <legend class="modal-title">
+                                Залиште Ваші дані, ми Вам перезвонимо
+                            </legend>
+
+                            <label class="form-field" for="user-name"><svg class="form-logo" width="18" height="18">
+                                    <use href="./images/icons.svg/symbol-defs6.svg#icon-dude"></use>
+                                </svg>Ім'я<input class="form-input" type="text" name="user-name" placeholder="">
+                            </label>
+
+
+                            <label class="form-field" for="user-phone"><svg class="form-logo" width="18" height="18">
+                                    <use href="./images/icons.svg/symbol-defs6.svg#icon-phone"></use>
+                                </svg>Телефон<input class="form-input" type="tel" name="user-phone"
+                                    placeholder=""></label>
+
+
+                            <label class="form-field" for="user-email"><svg class="form-logo" width="18" height="18">
+                                    <use href="./images/icons.svg/symbol-defs6.svg#icon-Envelope"></use>
+                                </svg> Пошта<input class="form-input" type="email" name="user-email"
+                                    placeholder=""></label>
+
+
+
+                            <div class="form-field">
+                                <label for="textarea">Коментар
+                                    <textarea class="textarea" name="Комментарий" id="textarea" cols="40" rows="10"
+                                        placeholder="Введіть текст"></textarea>
+                                </label>
+                            </div>
+                            <div class="form-footer">
+                                <input class="checkbox " type="checkbox" name="policy" id="policy">
+                                <span class="new-checkbox"></span>
+                                <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="">Условия
+                                        договора</a></label>
+                            </div>
+                            <button class="btn form-btn" type="submit">Відправити</button>
+                        </form>
                     </div>
                 </div>
                 <button class="btn" data-modal-open type="button">Заказать услугу</button>
@@ -133,21 +170,21 @@
                     <li class="item card-item">
                         <div class="work-thumb"><img src="./images/img.jpg" alt="працівник пише код" width="370"
                                 height="294">
-                            <h3 class="work-test">Десктопные приложения</h3>
+                            <h3 class="work-text">Десктопные приложения</h3>
                         </div>
                     </li>
 
                     <li class="item card-item">
                         <div class="work-thumb"><img src="./images/box2.jpg" alt="працівник вибирає макет для смартфону"
                                 width="370" height="294">
-                            <h3 class="work-test">Мобильные приложения</h3>
+                            <h3 class="work-text">Мобильные приложения</h3>
                         </div>
                     </li>
 
                     <li class="item card-item">
                         <div class="work-thumb"><img src="./images/box3.jpg" alt="працівник обирає колір з палітри"
                                 width="370" height="294">
-                            <h3 class="work-test">Дизайнерские решения</h3>
+                            <h3 class="work-text">Дизайнерские решения</h3>
                         </div>
                     </li>
                 </ul>
@@ -466,7 +503,21 @@
                     </li>
                 </ul>
             </div>
+            <div class="footer-form">
+                <form action="">
+                    <h2 class="connect-header">Подпишитесь на рассылку</h2>
+                    <label class="input-mail" for="user-mail"><input id="user-mail" type="email" name="user-mail"
+                            placeholder="E-mail"></label>
+                    <button class="btn footer-btn" type="submit">Підписатись <svg class="footer-logo" width="24"
+                            height="24">
+                            <use href="./images/icons.svg/symbol-defs6.svg#icon-TG">
+
+                            </use>
+                        </svg> </button>
+                </form>
+            </div>
         </div>
+
     </footer>
 
     <script src="./js/modal.js"></script>
