@@ -386,10 +386,16 @@ height: 15px;
    border-color: transparent;
    background-position: center;
 }
-
-
+.checkbox {
+   position: absolute;
+   left: 10px;
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+}
 /*============================================================== benefit*/
-.visually-hidden {
+.visually-hidden
+{
    position: absolute;
    width: 1px;
    height: 1px;
