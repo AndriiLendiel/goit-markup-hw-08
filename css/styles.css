@@ -196,7 +196,7 @@ color: var(--active-color);
    justify-content: center;
    align-items: center;
    padding: 10px 32px 10px 32px;
-   transition-property: color;
+   transition-property: background-color, box-shadow;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
@@ -230,22 +230,18 @@ color: var(--active-color);
    position: absolute;
    left: 50%;
    top: 50%;
-   transform: translate(-50%, -50%);
-   width: 528px;
-   height: 581px;
-   background-color: var(--white-color);
-   color: var(--second-color);
-}
-
-
-
-.modal {
    display: block;
    text-align: center;
    padding: 40px;
-   color: var(--white-color);
-   
-} 
+   background-color: var(--white-color);
+   transform: translate(-50%, -50%);
+   width: 528px;
+   min-height: 581px;
+   background-color: var(--white-color);
+   color: var(--second-color);
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+}
 .modal__btn {
    position: absolute;
    top: 8px;
@@ -309,11 +305,13 @@ height: 40px;
 .form__field textarea {
    display: block;
    margin: 0px;
-   margin-top: 4px;
    padding: 0px;
    width: 100%;
    border-radius: 4px;
    border: 1px solid rgba(33, 33, 33, 0.2);
+   transition-property: fill, color, border-color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__icon {
    fill: var(--second-color);
@@ -327,12 +325,18 @@ height: 40px;
    padding-left: 42px;
 }
 
+.input-name {
+   margin-bottom: 4px;
+}
+
+.form__field:hover .textarea,
 .form__field:hover .form__input,
 .form__field:hover .form__icon {
    color: var(--active-color);
    fill: var(--active-color);
    border-color: var(--active-color);
 }
+.form__field:focus-within .textarea,
 .form__field:focus-within .form__icon,
 .form__field:focus-within .form__input
 {
@@ -343,8 +347,21 @@ height: 40px;
 }
 .form__field .textarea {
    resize: none;
-   margin-top: 4px;
 }
+
+.textarea::placeholder {
+   font-style: normal;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.01em;
+
+color: rgba(117, 117, 117, 0.5);
+}
+
+.textarea[placeholder='Введіть текст'] {
+   padding: 12px 16px;
+}
+
 .form-footer {
    width: 100%;
    position: relative;
@@ -352,10 +369,8 @@ height: 40px;
    font-size: 14px;
    line-height: 1.71;
    color: var(--main-color);
-   display: flex;
    margin-bottom: 20px;
-   justify-content: center;
-   align-items: center;
+
 }
 .form-footer__link {
    color: var(--active-color);
@@ -367,18 +382,23 @@ height: 15px;
 .checkbox {
    appearance: none;
 }
+
+.policy {
+   display: flex;
+   justify-content: space-around;
+   align-items: baseline;
+}
 .new-checkbox {  
    display: block;
    width: 16px;
    height: 15px;
-   margin-right: 8px;
    border: var(--second-color) 2px solid;
    border-radius: 4px;
    transition-property: color, fill, border-color;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.checkbox:checked + .new-checkbox {
+.checkbox:checked + .policy .new-checkbox {
    background-color: var(--active-color);
    background-image: url(/gt_02/images/icons.svg/Vector\ \(1\).svg);
    background-repeat: no-repeat;
@@ -386,12 +406,16 @@ height: 15px;
    border-color: transparent;
    background-position: center;
 }
-.checkbox {
-   position: absolute;
-   left: 10px;
-   appearance: none;
-   -webkit-appearance: none;
-   -moz-appearance: none;
+.checkbox:focus + .policy .new-checkbox,
+.checkbox:hover + .policy .new-checkbox {
+   border-color: var(--active-color) ;
+}
+.form__btn:hover,
+.form__btn:focus {
+background-color: #188CE8;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+
 }
 /*============================================================== benefit*/
 .visually-hidden
@@ -451,7 +475,6 @@ height: 15px;
    display: flex;
    justify-content: center;
    align-items: center;
-   text-align: center;
    width: 100%;
 
    padding: 27px;
