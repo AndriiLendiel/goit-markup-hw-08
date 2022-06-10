@@ -64,7 +64,7 @@ font-size: 26px;
 line-height: 1.19;
 color: var(--active-color);
 }
-.header__logo--black {
+.header__logo {
    color: #000000;
 }
 /*=================================================================HEADER */
@@ -400,7 +400,7 @@ height: 15px;
 }
 .checkbox:checked + .policy .new-checkbox {
    background-color: var(--active-color);
-   background-image: url(/gt_02/images/icons.svg/Vector\ \(1\).svg);
+   background-image: url(/gt_02/images/icons.svg/Vector.svg);
    background-repeat: no-repeat;
    background-size: contain;
    border-color: transparent;
