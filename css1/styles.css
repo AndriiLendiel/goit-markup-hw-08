@@ -57,13 +57,13 @@ img {
    padding-top: 0px;
 }
  /* =================================================================LOGO */
-.logo {
+/* .logo {
 font-family: Raleway;
 font-weight: 700;
 font-size: 26px;
 line-height: 1.19;
 color: var(--active-color);
-} */
+} */ 
 
 /*=================================================================HEADER */
 /* .header {
@@ -205,7 +205,7 @@ color: var(--active-color);
    color: var(--white-color);
 } */
 
-
+/* 
 .backdrop {
    position: fixed;
    top: 0;
@@ -409,7 +409,7 @@ height: 15px;
 .form-footer__checkbox:focus + .form-footer__policy .form-footer__new-checkbox,
 .form-footer__checkbox:hover + .form-footer__policy .form-footer__new-checkbox {
    border-color: var(--active-color) ;
-}
+} */
 
 /*============================================================== benefit*/
 /* .visually-hidden
@@ -738,6 +738,9 @@ color: var(--second-color);
    0px 4px 4px rgba(0, 0, 0, 0.06),
    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.portfolio-list .item {
+   flex-basis: calc(100% / 3 - 30px);
+}
 /*====================================================================card-set*/
 /* .card-set {
    display: flex;
@@ -763,14 +766,10 @@ color: var(--second-color);
    0px 2px 1px rgba(0, 0, 0, 0.2);
    border-radius: 0px 0px 4px 4px; */
   */
-.portfolio-list .item {
-   flex-basis: calc(100% / 3 - 30px);
-}
+
 /* .text-team {
    padding-bottom: 30px;
    padding-top: 30px;
 } */
-.title-team {
-   margin-bottom: 10px;
-}
+
 
