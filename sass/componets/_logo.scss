@@ -12,3 +12,14 @@
 .header__container .logo {
         margin-right: 93px;
     }
+
+
+.footer__column .logo {
+    display: block;
+    margin-bottom: 20px;
+} 
+
+.footer__logo--white {
+    color: $white-color;
+    fill: currentColor;
+}

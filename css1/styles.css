@@ -148,7 +148,7 @@ color: var(--active-color);
 
 
  /*  ===============================================================hero */
-.hero { 
+/* .hero { 
    text-align: center;
    max-width: 1600px;
    height: 600px;
@@ -174,8 +174,8 @@ color: var(--active-color);
    margin-left: auto;
    margin-right: auto;
    margin-bottom: 30px;
-}
-.btn
+} */
+/* .btn
 {
    font-family: inherit;
    font-weight: 700;
@@ -203,7 +203,7 @@ color: var(--active-color);
    background-color: #188CE8;
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
    color: var(--white-color);
-}
+} */
 
 
 .backdrop {
@@ -412,7 +412,7 @@ height: 15px;
 }
 
 /*============================================================== benefit*/
-.visually-hidden
+/* .visually-hidden
 {
    position: absolute;
    width: 1px;
@@ -424,8 +424,8 @@ height: 15px;
    clip-path: inset(100%);
    clip: rect(0 0 0 0);
    overflow: hidden;
-}
-.primary-title {
+} */
+/* .primary-title {
    font-weight: 700;
    font-size: 14px;
    line-height: 1.14;
@@ -444,9 +444,9 @@ height: 15px;
 .benefits__icon {
    width: 70px;
    height: 70px;
-}
+} */
 /* ================================================================what we do */
-.general-title {
+/* .general-title {
    font-weight: 700;
    font-size: 36px;
    line-height: 1.16;
@@ -480,9 +480,9 @@ height: 15px;
    text-transform: uppercase;
    color: var(--white-color);
    background: rgba(47, 48, 58, 0.8);;
-}
+} */
 /*====================================================================== our team */
-.team {
+/* .team {
 background: var(--background-color)
 }
 
@@ -528,9 +528,9 @@ margin-bottom: 16px;
 .social__link:focus .social__icon {
    fill: var(--white-color);
 
-}
+} */
 /*=====================================================================PERMANENT CLIENTS */
-.clients__item {
+/* .clients__item {
    flex-basis: calc(100% / 6 - 30px);
 }
 .clients__link {
@@ -560,9 +560,9 @@ margin-right: 0px;
    border-radius: 4px;
    border-color: transparent;
    transform: scale(2);
-}
+} */
 /* ============================================================================footer */
-.footer__section {
+/* .footer__section {
    background-color:#2F303A;
    padding-top: 60px;
    padding-bottom: 60px;
@@ -644,7 +644,7 @@ margin-right: 0px;
 
 .input-mail input[type='email'] {
 padding-left: 12px;
-}
+} */
 /*======================================================================= buttons */
 .portfolio-btn {
    padding-left: 22px;
@@ -739,7 +739,7 @@ color: var(--second-color);
    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /*====================================================================card-set*/
-.card-set {
+/* .card-set {
    display: flex;
    flex-wrap: wrap;
    margin-left: -30px;
@@ -749,27 +749,27 @@ color: var(--second-color);
    margin-left: 30px;
    margin-top: 30px;
 
-}
-.benefits__item {
+} */
+/* .benefits__item {
    flex-basis: calc(100% / 4 - 30px);
-}
-.work__list.item {
+} */
+/* .work__list.item {
    flex-basis: calc(100% / 3 - 30px);
-}
-.team__list .item {
+} */
+/* .team__list .item {
    text-align: center;
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
    0px 1px 1px rgba(0, 0, 0, 0.14), 
    0px 2px 1px rgba(0, 0, 0, 0.2);
-   border-radius: 0px 0px 4px 4px;
-}
+   border-radius: 0px 0px 4px 4px; */
+  */
 .portfolio-list .item {
    flex-basis: calc(100% / 3 - 30px);
 }
-.text-team {
+/* .text-team {
    padding-bottom: 30px;
    padding-top: 30px;
-}
+} */
 .title-team {
    margin-bottom: 10px;
 }
