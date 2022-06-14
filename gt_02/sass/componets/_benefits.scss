@@ -1,0 +1,22 @@
+.primary-title {
+    @extend %primary-title;
+}
+
+.benefits {
+&__thumb {
+    display: flex;
+    height: 120px;
+    background-color: $background-color2;
+    margin-bottom: $distance2;
+    align-items: center;
+    justify-content: center;
+}
+&__icon {
+    width: 70px;
+    height: 70px;
+}
+&__item {
+    flex-basis: calc(100% / 4 - 30px);
+}
+}
+

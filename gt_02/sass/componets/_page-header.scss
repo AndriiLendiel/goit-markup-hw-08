@@ -1,0 +1,90 @@
+// header
+
+.header {
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $second-color;
+    border-bottom: 1px solid #E5E5E5;
+    }
+
+
+
+.header__container {
+    display: flex;
+    align-items: center;
+    }
+
+
+.site-nav{
+display: flex;
+align-items: center;
+
+& .item:not(:last-child) {
+margin-right: 50px;}
+
+&__link {
+    position: relative;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition-property: color, transform;
+    transition-timing-function: $beizer;
+    transition-duration: $timing;
+
+    &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: $active-color;
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    transform-origin: left;
+    transform: scale(0);
+    transition-property: transform, color;
+    transition-duration: $timing;
+    transition-timing-function: $beizer;
+}
+
+    &:focus, &:hover {
+        color: $active-color;
+
+        &::after{
+        transform-origin: to right;
+        transform: scale(1);
+        }
+    }
+}
+}
+
+.contacts-nav {
+    display:flex;
+    align-items: center;
+    margin-left: auto;
+
+& .item:not(:last-child) {
+    margin-right: 50px;
+}
+&__icon {
+    fill: currentColor;
+    margin-right: 10px;
+} 
+&__link {
+    position: relative;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--main-color);
+    display: inline-flex;
+    transition-property: color, transform;
+    transition-timing-function: $beizer;
+    transition-duration: $timing;
+
+    &:focus, &:hover {
+        color: $active-color;
+}
+}
+}
