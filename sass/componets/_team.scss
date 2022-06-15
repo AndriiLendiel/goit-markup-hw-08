@@ -1,9 +1,7 @@
 .team {
 background-color: $background-color2;
 &__paragraph {
-font-size: 16px;
-line-height: 1.18;
-margin-bottom: 16px;
+@extend %team-paragraph;
 }
 &__text {
     padding-bottom: $distance2;

@@ -1,9 +1,10 @@
 
-@import "./utils/fonts";
-@import "./utils/variables";
+@import "./utils/variables.scss";
+@import"./utils/fonts/font";
 @import "./componets/logo";
 @import "./componets/page-header";
 @import"./componets/hero";
+@import"./componets/benefits";
 @import"./componets/work";
 @import"./componets/team";
 @import"./componets/clients";
