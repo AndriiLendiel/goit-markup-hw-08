@@ -86,7 +86,7 @@ body {
 }
 
 .benefits__paragraph, .team__paragraph {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.18;
   margin-bottom: 16px;
 }
@@ -143,19 +143,43 @@ body {
 }
 
 @font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-display: auto;
-  src: url("./Roboto-Medium.woffS");
-}
-
-@font-face {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-display: auto;
-  src: url("./Raleway-VariableFont_wght.woff");
+  src: url("/fonts/Raleway-Bold.woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("/fonts/Roboto-Regular.woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: auto;
+  src: url("/fonts/Roboto-Medium.woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+  src: url("/fonts/Roboto-Bold.woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url("/fonts/Roboto-Black.woff");
 }
 
 .logo {
