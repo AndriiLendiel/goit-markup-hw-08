@@ -6,7 +6,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: auto;
-    src: url('/fonts/Raleway-Bold.woff');
+    src: url('/fonts/Raleway-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -14,7 +14,8 @@
     font-style: normal;
     font-weight: 400;
     font-display: auto;
-    src: url('/fonts/Roboto-Regular.woff') }
+    src: url('/fonts/Roboto-Regular.woff')  format('woff') ;
+}
 
 
 @font-face {
@@ -22,7 +23,7 @@
     font-style: normal;
     font-weight: 500;
     font-display: auto;
-    src: url('/fonts/Roboto-Medium.woff')
+    src: url('/fonts/Roboto-Medium.woff')  format('woff');
 }
 
 @font-face {
@@ -30,7 +31,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: auto;
-    src: url('/fonts/Roboto-Bold.woff')
+    src: url('/fonts/Roboto-Bold.woff')  format('woff');
 }
 
 @font-face {
@@ -38,5 +39,5 @@
     font-style: normal;
     font-weight: 900;
     font-display: auto;
-    src: url('/fonts/Roboto-Black.woff')
+    src: url('/fonts/Roboto-Black.woff')  format('woff');
 }
