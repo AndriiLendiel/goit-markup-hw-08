@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: auto;
-  src: url("/fonts/Raleway-Bold.woff");
+  src: url("/fonts/Raleway-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: url("/fonts/Roboto-Regular.woff");
+  src: url("/fonts/Roboto-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -20,7 +20,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: auto;
-  src: url("/fonts/Roboto-Medium.woff");
+  src: url("/fonts/Roboto-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -28,7 +28,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: auto;
-  src: url("/fonts/Roboto-Bold.woff");
+  src: url("/fonts/Roboto-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -36,7 +36,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: auto;
-  src: url("/fonts/Roboto-Black.woff");
+  src: url("/fonts/Roboto-Black.woff") format("woff");
 }
 
 .primary-title {
@@ -1027,7 +1027,7 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  padding: 24px;
+  padding: 20px;
   text-align: center;
   font-size: 18px;
   line-height: 1.55;
@@ -1045,6 +1045,12 @@ body {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text {
+  padding: 20px 24px;
+  border: 1px solid #eee;
+  border-top: none;
 }
 
 .text__title {
