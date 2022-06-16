@@ -19,12 +19,6 @@ $beizer: cubic-bezier(0.4, 0, 0.2, 1);
 $timing: 250ms;
 
 
-
-
-
-
-
-
 %primary-title {
     font-weight: 700;
     font-size: 14px;
@@ -38,7 +32,7 @@ $timing: 250ms;
     line-height: 1.71;
     margin-bottom: 16px;
 }
-.general-title {
+%general-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -46,4 +40,13 @@ $timing: 250ms;
     color: $second-color;
     margin-bottom: 50px; 
 }
+%footer-header {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $white-color;
+    text-align: start;
+    margin-bottom: 20px;
+    }
 

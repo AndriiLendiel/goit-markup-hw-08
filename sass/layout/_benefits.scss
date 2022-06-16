@@ -1,6 +1,6 @@
 
-
-.benefits {
+.benefit {
+    
 &__item {
     flex-basis: calc(100% / 4 - 30px);
 }
@@ -12,16 +12,17 @@
     margin-bottom: $distance2;
     align-items: center;
     justify-content: center;
+    border-radius: 4px;
 }
 &__icon {
     width: 70px;
     height: 70px;
-} 
+}
+&__paragraph {
+@extend %team-paragraph;
+}
 }
 
 .primary-title {
 @extend %primary-title;
-}
-.benefits__paragraph {
-@extend %team-paragraph;
 }

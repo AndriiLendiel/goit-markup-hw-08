@@ -1,9 +1,12 @@
 
 .clients{
+    &__title {
+    @extend %general-title;
+    }
     &__item {
     flex-basis: calc(100% / 6 - 30px);
     }
-    &:last-child .partner-back {
+    &:last-child {
     margin-right: 0px;
     }
     &__link {

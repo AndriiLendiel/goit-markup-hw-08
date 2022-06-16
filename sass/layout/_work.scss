@@ -1,12 +1,13 @@
 
-.text {
-    padding: 20px 24px;
-    border: 1px solid #EEEEEE;
-    border-top: none;
-    }
-
 .work {
     padding-top: 0px;
+    &__title {
+        @extend %general-title;
+    }
+
+&__item {
+    flex-basis: calc(100% / 3 - 30px);
+}
 
 &__thumb {
     position: relative;
@@ -26,7 +27,10 @@
     color: $white-color;
     background: rgba(47, 48, 58, 0.8);
 }
-&__list .item {
-    flex-basis: calc(100% / 3 - 30px);
 }
-}
+
+// .text {
+//     padding: 20px 24px;
+//     border: 1px solid #EEEEEE;
+//     border-top: none;
+//     }

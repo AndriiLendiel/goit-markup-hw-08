@@ -6,20 +6,23 @@
     letter-spacing: 0.02em;
     color: $second-color;
     border-bottom: 1px solid #E5E5E5;
-    }
 
-.header__logo {
-        color: #000000;
-    }
-
-.header__container .logo {
-        margin-right: 93px;
-    }
-
-.header__container {
+    &__container {
     display: flex;
     align-items: center;
     }
+    & .logo {
+        margin-right: 93px;
+        &--black {
+            color: black;
+        }
+    }
+}
+
+
+
+
+
 
 
 .site-nav{
