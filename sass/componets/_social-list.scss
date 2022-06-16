@@ -1,0 +1,39 @@
+.social {
+    display: flex;
+    justify-content: center;
+
+    &__item:last-child{
+        margin-right: 0px;
+    }
+    &__icon {
+    fill: $icon-color;
+    align-items: center;
+    transition-property: fill;
+    transition-duration: $timing;
+    transition-timing-function: $beizer;
+    } 
+    }
+    .social__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    margin-right: 10px;
+    transform: scale(1) rotate(0);
+    background: rgba(255, 255, 255, 0.1);
+    transition-property:background-color, transform;
+    transition-duration: $timing;
+    transition-timing-function: $beizer;
+
+    &:hover, &:focus {
+    background-color: $active-color;
+    transform: scale(1.6) rotate(360deg);
+    }
+
+    &:focus .social__icon,
+    &:hover .social__icon {
+    fill: $white-color;
+    }
+}

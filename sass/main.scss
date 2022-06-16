@@ -1,16 +1,22 @@
 
-@import "./utils/variables.scss";
-@import"./fonts/font";
-@import "./componets/logo";
-@import "./componets/page-header";
-@import"./componets/hero";
-@import"./componets/benefits";
-@import"./componets/work";
-@import"./componets/team";
-@import"./componets/clients";
-@import"./componets/footer";
-@import"./componets/modal";
-@import"./componets/portfolio";
+@import '../fonts/font';
+@import '../sass/utils/variables.scss';
+@import '../sass/base/global';
+@import '../sass/componets/button';
+@import '../sass/componets/card-set';
+@import '../sass/componets/container';
+@import '../sass/componets/logo';
+@import '../sass/componets/modal';
+@import '../sass/componets/social-list';
+@import '../sass/layout/page-header';
+@import '../sass/layout/hero';
+@import '../sass/layout/work';
+@import '../sass/layout/benefits';
+@import '../sass/layout/team';
+@import '../sass/layout/clients';
+@import '../sass/layout/footer';
+@import '../sass/layout/portfolio';
+
 
 
 

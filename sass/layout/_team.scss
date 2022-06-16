@@ -1,0 +1,22 @@
+.team {
+background-color: $background-color2;
+&__paragraph {
+@extend %team-paragraph;
+}
+&__text {
+    padding-bottom: $distance2;
+    padding-top: $distance2;
+    text-align: center;
+    }
+}
+
+.primary-title {
+    @extend %primary-title;
+}
+
+
+
+
+
+
+
