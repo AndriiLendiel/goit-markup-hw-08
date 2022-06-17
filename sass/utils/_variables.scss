@@ -1,0 +1,52 @@
+
+// заготовки колір
+
+$second-color: #212121;
+$white-color: #FFFFFF;
+$main-color: #757575;
+$active-color: #2196F3;
+$background-color: #2F303A;
+$icon-color: #AFB1B8;
+$background-color2: #F5F4FA;
+
+// заготовки відступи
+$distance1: 15px;
+$distance2:30px;
+
+// інші заготовки
+
+$beizer: cubic-bezier(0.4, 0, 0.2, 1);
+$timing: 250ms;
+
+
+%primary-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $second-color;
+    margin-bottom: 10px;
+}
+%team-paragraph {
+    font-size: 14px;
+    line-height: 1.71;
+    margin-bottom: 16px;
+}
+%general-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: $second-color;
+    margin-bottom: 50px; 
+}
+%footer-header {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $white-color;
+    text-align: start;
+    margin-bottom: 20px;
+    }
+

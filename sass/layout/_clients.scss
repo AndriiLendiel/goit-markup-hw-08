@@ -1,0 +1,37 @@
+
+.clients{
+    &__title {
+    @extend %general-title;
+    }
+    &__item {
+    flex-basis: calc(100% / 6 - 30px);
+    }
+    &__link {
+    display: flex;
+    height: 92px;
+    border: $icon-color 1px solid;
+    outline: none;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition-property: transform, color, border-radius, border-color;
+    transition-duration: $timing;
+    transition-timing-function: $beizer;
+        &:hover,
+        &:focus {
+    color: $active-color;
+    border: $active-color 1px solid;
+    border-radius: 4px;
+    border-color: transparent;
+    transform: scale(2);
+} 
+}
+    &__logo {
+    fill:currentColor;
+}
+}
+
+
+
+
