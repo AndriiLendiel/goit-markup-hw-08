@@ -782,6 +782,11 @@ body {
   background-color: #F5F4FA;
 }
 
+.team__item {
+  -ms-flex-preferred-size: calc(100% / 4 - 30px);
+      flex-basis: calc(100% / 4 - 30px);
+}
+
 .team__paragraph {
   font-size: 16px;
 }

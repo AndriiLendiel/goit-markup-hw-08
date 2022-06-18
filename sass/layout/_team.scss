@@ -1,5 +1,8 @@
 .team {
 background-color: $background-color2;
+&__item {
+    flex-basis: calc(100% / 4 - 30px)
+}
 &__title {
  @extend %general-title;
     }
