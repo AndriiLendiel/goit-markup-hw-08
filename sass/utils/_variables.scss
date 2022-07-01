@@ -8,6 +8,7 @@ $active-color: #2196F3;
 $background-color: #2F303A;
 $icon-color: #AFB1B8;
 $background-color2: #F5F4FA;
+$address-color: rgba(255, 255, 255, 0.6);
 
 // заготовки відступи
 $distance1: 15px;
@@ -34,11 +35,15 @@ $timing: 250ms;
 }
 %general-title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    font-size: 28px;
+    line-height: 1.17;
     text-align: center;
     color: $second-color;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
+    @media screen and (min-width: 1199px) {
+    font-size: 36px;
+    line-height: 1.16;
+    }
 }
 %footer-header {
     text-transform: uppercase;
@@ -46,7 +51,10 @@ $timing: 250ms;
     font-size: 14px;
     line-height: 1.14;
     color: $white-color;
-    text-align: start;
     margin-bottom: 20px;
     }
+
+
+
+    
 

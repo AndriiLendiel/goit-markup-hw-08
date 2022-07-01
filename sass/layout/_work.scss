@@ -27,10 +27,8 @@
     color: $white-color;
     background: rgba(47, 48, 58, 0.8);
 }
+@include mq(notDesk) {
+    display: none;
+    } 
 }
 
-// .text {
-//     padding: 20px 24px;
-//     border: 1px solid #EEEEEE;
-//     border-top: none;
-//     }

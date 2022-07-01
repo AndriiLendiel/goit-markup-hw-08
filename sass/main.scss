@@ -1,5 +1,6 @@
 
 @import './utils/variables';
+@import'./utils/breakepoints';
 @import './base/font';
 @import './base/global';
 @import'./componets/section';
@@ -9,6 +10,7 @@
 @import './componets/logo';
 @import './componets/modal';
 @import './componets/social-list';
+@import'./componets/menu';
 @import './layout/page-header';
 @import './layout/hero';
 @import './layout/work';

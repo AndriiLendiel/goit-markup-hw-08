@@ -1,36 +1,184 @@
 // header
 
-.header {
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: $second-color;
-    border-bottom: 1px solid #E5E5E5;
+@include mq(mob-only) {
+    .header {
+        padding-top: 16px;
+        padding-bottom: 16px ;
+        & .logo {
+            font-family: Raleway, sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1.16;
+            letter-spacing: 0.03em;
+        }
+        &__container {
+        display: flex;
+        justify-content: space-between;
+            @include mq(tab-only) {
+        align-items: baseline;
+    }
+        }
+        & .site-nav {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+    }
+}
 
-    &__container {
+
+.site-nav {
+        @media screen and (max-width: 479px) {
+        margin-bottom: 45px;;
+        }
+            &__item {
+            font-family: Roboto;
+            font-weight: 500;
+            font-style:normal;
+            font-size: 40px;
+            line-height: 1.17;
+            line-height: 100%;
+            text-align: start;
+            letter-spacing: 2%;
+            color: $second-color;
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+
+            }
+                &__link {
+                padding: 0px;
+                transition-property: color;
+                transition-timing-function: $beizer;
+                transition-duration: $timing;
+                &:hover, &:focus {
+                color: $active-color;
+                }
+                }
+                }
+            
+                
+
+
+
+
+
+
+
+.contacts-nav {
     display: flex;
-    align-items: center;
-    }
-    & .logo {
-        margin-right: 93px;
-        
-    }
+    flex-wrap: wrap;
+    margin-top: auto;
+    // margin-bottom: 64px;
+    flex-direction: column;
+    &__icon {
+        display: none;
+        }
+    &__item {
+            font-family: Roboto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 28px;
+            @media screen and (max-width: 479px) {
+                font-size: 20px;
+        }
+            line-height: 1.17;
+            line-height: 100%;
+            text-align: start;
+            letter-spacing: 0.02em;
+            color: $main-color;
+            
+            &:first-child {    
+            margin-top: 32px;
+            order: 3;
+            }
+            }
+
+        &__link {
+            display: block;
+            transform: scale(1);
+        transition-property: color, transform;
+        transition-timing-function: $beizer;
+        transition-duration: $timing;
+        &:hover, &:focus {
+            color: $active-color;
+            transform: scale(1.13);
+}
+}
+}
+
+
+    .menu-social {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 64px;
+        @media screen and (max-width: 479px) {
+        margin-top: 32;
+        }
+        // justify-content: center;
+        &__item {
+        color: $active-color;
+        font-family: Roboto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 2%;
+        }
+        &__item {
+            // padding-left: 10px;
+            padding-right: 10px;
+            // padding-bottom: 5px;
+            
+            border-right: 1px solid $main-color;
+}
+}
 }
 
 
 
 
 
+@include mq(notMobile) {
+.menu-social {
+display: none;
+}
+    .header {
+        justify-content: space-between;
+    height: 80px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $second-color;
+    border-bottom: 1px solid #E5E5E5;
+    &__container {
+        display: flex;
+        align-items: center;
+            @include mq(tab-only) {
+        align-items: baseline;
+    }
+    }
+        & .logo {
+        margin-right: 88px;
+    }
+.nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
 
-
-.site-nav{
-display: flex;
-align-items: center;
-
-& .item:not(:last-child) {
-margin-right: 50px;}
-
-&__link {
+.site-nav {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    // margin-right: 84px;
+    &__item:not(:last-child)
+    {
+        margin-right: 50px;
+    }
+}
+    .site-nav__link {
     position: relative;
     align-items: center;
     padding-top: 32px;
@@ -68,30 +216,90 @@ margin-right: 50px;}
 }
 
 .contacts-nav {
-    display:flex;
-    align-items: center;
-    margin-left: auto;
+            @include mq(tab-only) {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+        }
 
-& .item:not(:last-child) {
-    margin-right: 50px;
+    display: block;
+    flex-wrap: wrap;
+&__link {
+        padding-top: 21px;
+    padding-bottom: 21px;
 }
+
 &__icon {
     fill: currentColor;
     margin-right: 10px;
 } 
-&__link {
+&__item {
+    font-size: 12px;
+    // margin-left: auto;
+}
+}
+
+.contacts-nav__link {
     position: relative;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+
     color: $main-color;
     display: inline-flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
     transition-property: color, transform;
-    transition-timing-function: $beizer;
     transition-duration: $timing;
-
-    &:focus, &:hover {
+    transition-timing-function: $beizer;
+    &:hover, &:focus {
         color: $active-color;
+    }
 }
 }
+
+
+
+
+
+
+
+
+@include mq(desk) {
+    .header {
+        display: flex;
+        justify-content: space-around;
+        & .logo {
+            margin-right: 93px;
+            font-size: 26px;
+            line-height: 1.19;
+        }
+    }
+
+
+    .nav {
+        margin-right: 200px;
+    }
+.contacts-nav {
+    padding: 0px;
+    align-content: center;
+    padding-top: 0px;
+    display: flex;
+    &__item {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
 }
+        .contacts-nav .item:not(:last-child) {
+    margin-right: $distance2;
+    
+    }
+    }
+
+
+
+
+
+
+
+
+
+

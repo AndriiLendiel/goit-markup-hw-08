@@ -1,7 +1,10 @@
 .portfolio {
-    &__item {
-    flex-basis: calc(100% / 3 - 30px);
-    }
+
+&__list {
+justify-content: flex-start;
+}
+
+
     &__link {
     display: block;
     position: relative;
@@ -47,6 +50,7 @@
 }
 
 
+
     .text {
     padding: 20px 24px;
     border: 1px solid #eee;
@@ -64,3 +68,31 @@
         line-height: 1.87;
     }
     }
+
+
+    @include mq(tab-only) {
+
+            .portfolio__link {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                & .text {
+                flex-grow: 1;
+            }
+            }
+    }
+
+
+    .portfolio__item {
+     @include mq(mob-only)   {
+    width: 100%;
+}
+
+    @include mq(tab) {
+    width:calc((100% - 2 * 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width:calc((100% - 3 * 30px) / 3);
+    }
+}

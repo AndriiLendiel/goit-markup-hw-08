@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
@@ -15,38 +16,78 @@
 <body>
     <!--Shapka-->
     <header class="header">
-        <div class="header__container container">
+        <div class="container header__container ">
             <a href="./index.html" class="logo link">Web<span class="logo--black">Studio</span></a>
 
-            <nav class="nav">
-                <ul class="site-nav list">
-                    <li class="item site-nav__item "><a class="link site-nav__link" href="./index.html">Студия</a></li>
-                    <li class="item site-nav__item "><a class="link site-nav__link"
-                            href="./portfolio.html">Портфолио</a>
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="icon-menu" width="19" height="19">
+                    <use href="./images/icons/sprite.svg#icon-menu_24px"></use>
+                </svg>
+            </button>
+
+
+            <div class="menu-container js-menu-container" id="mobile-menu">
+                <button class="menu-toggle js-close-menu">
+                    <svg class="icon-menu" width="19" height="19">
+                        <use href="./images/icons/sprite.svg#icon-close_24px"></use>
+                    </svg>
+                </button>
+
+                <nav class="nav">
+                    <ul class="site-nav list">
+                        <li class="site-nav__item site-nav__item "><a class="link site-nav__link"
+                                href="./index.html">Студия</a>
+                        </li>
+                        <li class="site-nav__item site-nav__item "><a class="link site-nav__link"
+                                href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="site-nav__item site-nav__item "><a class="link site-nav__link" href="">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="list contacts-nav">
+                    <li class="item contacts-nav__item">
+
+
+                        <a class="link contacts-nav__link" href="mailto:info@devstudio.com"><svg
+                                class="contacts-nav__icon" width="16" height="12">
+                                <use href="./images/icons/sprite.svg#icon-envelope">
+                                </use>
+                            </svg>
+                            info@devstudio.com</a>
+
                     </li>
-                    <li class="item site-nav__item "><a class="link site-nav__link" href="">Контакты</a></li>
+
+                    <li class="item contacts-nav__item">
+                        <a class="link contacts-nav__link" href="tel:+0961111111"><svg class="contacts-nav__icon"
+                                width="10" height="16">
+                                <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+                            </svg>+38 096 111 1111 </a>
+                    </li>
                 </ul>
-            </nav>
-            <ul class="list contacts-nav">
-                <li class="item contacts-nav__item">
 
 
-                    <a class="link contacts-nav__link" href="mailto:info@devstudio.com"><svg class="contacts-nav__icon"
-                            width="16" height="12">
-                            <use href="./images/icons/sprite.svg#icon-envelope">
-                            </use>
-                        </svg>
-                        info@devstudio.com</a>
 
-                </li>
 
-                <li class="item contacts-nav__item">
-                    <a class="link contacts-nav__link" href="tel:+0961111111"><svg class="contacts-nav__icon" width="10"
-                            height="16">
-                            <use href="./images/icons/sprite.svg#icon-smartphone"></use>
-                        </svg>+38 096 111 1111 </a>
-                </li>
-            </ul>
+                <ul class="menu-social">
+                    <li class="menu-social__item">Instagram<a href="" target="_blank" rel="noopener noreferrer">
+                        </a>
+                    </li>
+                    <li class="menu-social__item">Twitter<a href="" target="_blank" rel="noopener noreferrer">
+
+                        </a>
+                    </li>
+                    <li class="menu-social__item">Facebook<a href="" target="_blank" rel="noopener noreferrer">
+                        </a>
+                    </li>
+                    <li class="menu-social__item">LinkedIn<a href="" target="_blank" rel="noopener noreferrer">
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
         </div>
     </header>
     <!--Main-->
@@ -72,13 +113,42 @@
                     <li class="portfolio__item item card-item ">
 
                         <a class="link portfolio__link" href="" target="_blank" rel="noopener noreferrer">
-                            <div class="portfolio__thumb"><img src="./images/img0.jpg" alt="ноутбук" width="370"
-                                    height="294">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source srcset="
+                                ./images/img-450.webp 1x,
+                                ./images/img-900.webp 2x" type="image/webp" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                ./images/img-450.jpg 1x,
+                                ./images/img-900.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                                        ./images/img-354.webp 1x,
+                                                        ./images/img-708.webp 2x" type="image/webp"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                                        ./images/img-354.jpg 1x,
+                                                        ./images/img-708.jpg 2x" type="image/jpeg"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                    ./images/img-370.webp 1x,
+                                    ./images/img-740.webp 2x" type="image/webp" media="(min-width: 1200px)">
+
+                                    <source srcset="
+                                ./images/img-370.jpg 1x,
+                                ./images/img-740.jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
+                                    <img src="./images/img-450.jpg" alt="Игорь Демьяненко" width="450" height="294">
+                                </picture>
+
                                 <p class="portfolio__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing
                                     elit.
                                     Error
                                     aliquam dolorum
-                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio provident
+                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio
+                                    provident
                                     soluta et iure laboriosam eius doloribus architecto vel.</p>
                             </div>
 
@@ -93,13 +163,42 @@
 
                     <li class="portfolio__item item card-item">
                         <a class="link portfolio__link" href="" target="_blank" rel="noopener noreferrer">
-                            <div class="portfolio__thumb"><img src="./images/img1.jpg" alt="игра в баскетбол"
-                                    width="370" height="294">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source srcset="
+                                ./images/img-1-450.webp 1x,
+                                ./images/img-1-900.webp 2x" type="image/webp" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                ./images/img-1-450.jpg 1x,
+                                ./images/img-1-900.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                                        ./images/img-1-354.webp 1x,
+                                                        ./images/img-1-708.webp 2x" type="image/webp"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                                        ./images/img-1-354.jpg 1x,
+                                                        ./images/img-1-708.jpg 2x" type="image/jpeg"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                    ./images/img-1-370.webp 1x,
+                                    ./images/img-1-740.webp 2x" type="image/webp" media="(min-width: 1200px)">
+
+                                    <source srcset="
+                                ./images/img-1-370.jpg 1x,
+                                ./images/img-1-740.jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
+
+                                    <img src="./images/img-1-450.jpg" alt="Игорь Демьяненко" width="450" height="294">
+                                </picture>
                                 <p class="portfolio__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing
                                     elit.
                                     Error
                                     aliquam dolorum
-                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio provident
+                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio
+                                    provident
                                     soluta et iure laboriosam eius doloribus architecto vel.</p>
                             </div>
                             <div class="text">
@@ -113,13 +212,42 @@
 
                     <li class="portfolio__item item card-item">
                         <a class="link portfolio__link" href="" target="_blank" rel="noopener noreferrer">
-                            <div class="portfolio__thumb"><img src="./images/img2.jpg" alt="риба" width="370"
-                                    height="294">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source srcset="
+                                ./images/img-2-450.webp 1x,
+                                ./images/img-2-900.webp 2x" type="image/webp" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                ./images/img-2-450.jpg 1x,
+                                ./images/img-1-900.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                                        ./images/img-2-354.webp 1x,
+                                                        ./images/img-2-708.webp 2x" type="image/webp"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                                        ./images/img-2-354.jpg 1x,
+                                                        ./images/img-2-708.jpg 2x" type="image/jpeg"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                    ./images/img-2-370.webp 1x,
+                                    ./images/img-2-740.webp 2x" type="image/webp" media="(min-width: 1200px)">
+
+                                    <source srcset="
+                                ./images/img-2-370.jpg 1x,
+                                ./images/img-2-740.jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
+
+                                    <img src="./images/img-2-450.jpg" alt="Игорь Демьяненко" width="450" height="294">
+                                </picture>
                                 <p class="portfolio__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing
                                     elit.
                                     Error
                                     aliquam dolorum
-                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio provident
+                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio
+                                    provident
                                     soluta et iure laboriosam eius doloribus architecto vel.</p>
                             </div>
                             <div class="text">
@@ -132,13 +260,42 @@
                     </li>
                     <li class="portfolio__item item card-item">
                         <a class="link portfolio__link" href="" target="_blank" rel="noopener noreferrer">
-                            <div class="portfolio__thumb"><img src="./images/img3.jpg" alt="наушники" width="370"
-                                    height="294">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source srcset="
+                                ./images/img-3-450.webp 1x,
+                                ./images/img-3-900.webp 2x" type="image/webp" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                ./images/img-3-450.jpg 1x,
+                                ./images/img-3-900.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                                        ./images/img-3-354.webp 1x,
+                                                        ./images/img-3-708.webp 2x" type="image/webp"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                                        ./images/img-3-354.jpg 1x,
+                                                        ./images/img-3-708.jpg 2x" type="image/jpeg"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                    ./images/img-3-370.webp 1x,
+                                    ./images/img-3-740.webp 2x" type="image/webp" media="(min-width: 1200px)">
+
+                                    <source srcset="
+                                ./images/img-3-370.jpg 1x,
+                                ./images/img-3-740.jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
+
+                                    <img src="./images/img-3-450.jpg" alt="Игорь Демьяненко" width="450" height="294">
+                                </picture>
                                 <p class="portfolio__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing
                                     elit.
                                     Error
                                     aliquam dolorum
-                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio provident
+                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio
+                                    provident
                                     soluta et iure laboriosam eius doloribus architecto vel.</p>
                             </div>
                             <div class="text">
@@ -150,13 +307,42 @@
                     </li>
                     <li class="portfolio__item item card-item">
                         <a class="link portfolio__link" href="" target="_blank" rel="noopener noreferrer">
-                            <div class="portfolio__thumb"><img src="./images/img4.jpg" alt="две коробки" width="370"
-                                    height="294">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source srcset="
+                                ./images/img-4-450.webp 1x,
+                                ./images/img-4-900.webp 2x" type="image/webp" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                ./images/img-4-450.jpg 1x,
+                                ./images/img-3-900.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                                        ./images/img-4-354.webp 1x,
+                                                        ./images/img-4-708.webp 2x" type="image/webp"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                                        ./images/img-4-354.jpg 1x,
+                                                        ./images/img-4-708.jpg 2x" type="image/jpeg"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                    ./images/img-4-370.webp 1x,
+                                    ./images/img-4-740.webp 2x" type="image/webp" media="(min-width: 1200px)">
+
+                                    <source srcset="
+                                ./images/img-4-370.jpg 1x,
+                                ./images/img-4-740.jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
+
+                                    <img src="./images/img-4-450.jpg" alt="Игорь Демьяненко" width="450" height="294">
+                                </picture>
                                 <p class="portfolio__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing
                                     elit.
                                     Error
                                     aliquam dolorum
-                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio provident
+                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio
+                                    provident
                                     soluta et iure laboriosam eius doloribus architecto vel.</p>
                             </div>
                             <div class="text">
@@ -168,13 +354,42 @@
                     </li>
                     <li class="portfolio__item item card-item">
                         <a class="link portfolio__link" href="" target="_blank" rel="noopener noreferrer">
-                            <div class="portfolio__thumb"><img src="./images/img5.jpg" alt="монитор" width="370"
-                                    height="294">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source srcset="
+                                ./images/img-5-450.webp 1x,
+                                ./images/img-5-900.webp 2x" type="image/webp" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                ./images/img-5-450.jpg 1x,
+                                ./images/img-5-900.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                                        ./images/img-5-354.webp 1x,
+                                                        ./images/img-5-708.webp 2x" type="image/webp"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                                        ./images/img-5-354.jpg 1x,
+                                                        ./images/img-5-708.jpg 2x" type="image/jpeg"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                    ./images/img-5-370.webp 1x,
+                                    ./imagesimg-5-740.webp 2x" type="image/webp" media="(min-width: 1200px)">
+
+                                    <source srcset="
+                                ./images/img-5-370.jpg 1x,
+                                ./images/img-5-740.jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
+
+                                    <img src="./images/img-5-450.jpg" alt="Игорь Демьяненко" width="450" height="294">
+                                </picture>
                                 <p class="portfolio__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing
                                     elit.
                                     Error
                                     aliquam dolorum
-                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio provident
+                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio
+                                    provident
                                     soluta et iure laboriosam eius doloribus architecto vel.</p>
                             </div>
                             <div class="text">
@@ -186,13 +401,42 @@
                     </li>
                     <li class="portfolio__item item card-item">
                         <a class="link portfolio__link" href="" target="_blank" rel="noopener noreferrer">
-                            <div class="portfolio__thumb"><img src="./images/img6.jpg" alt="книга" width="370"
-                                    height="294">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source srcset="
+                                ./images/img-6-450.webp 1x,
+                                ./images/img-6-900.webp 2x" type="image/webp" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                ./images/img-6-450.jpg 1x,
+                                ./images/img-6-900.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                                        ./images/img-6-354.webp 1x,
+                                                        ./images/img-6-708.webp 2x" type="image/webp"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                                        ./images/img-6-354.jpg 1x,
+                                                        ./images/img-6-708.jpg 2x" type="image/jpeg"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                    ./images/img-6-370.webp 1x,
+                                    ./images/img-6-740.webp 2x" type="image/webp" media="(min-width: 1200px)">
+
+                                    <source srcset="
+                                ./images/img-6-370.jpg 1x,
+                                ./images/img-6-740.jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
+
+                                    <img src="./images/img-6-450.jpg" alt="Игорь Демьяненко" width="450" height="294">
+                                </picture>
                                 <p class="portfolio__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing
                                     elit.
                                     Error
                                     aliquam dolorum
-                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio provident
+                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio
+                                    provident
                                     soluta et iure laboriosam eius doloribus architecto vel.</p>
                             </div>
                             <div class="text">
@@ -205,13 +449,42 @@
                     </li>
                     <li class="portfolio__item item card-item">
                         <a class="link portfolio__link" href="" target="_blank" rel="noopener noreferrer">
-                            <div class="portfolio__thumb"><img src="./images/img7.jpg" alt="етикетка" width="370"
-                                    height="294">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source srcset="
+                                ./images/img-7-450.webp 1x,
+                                ./images/img-7-900.webp 2x" type="image/webp" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                ./images/img-7-450.jpg 1x,
+                                ./images/img-7-900.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                                        ./images/img-7-354.webp 1x,
+                                                        ./images/img-7-708.webp 2x" type="image/webp"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                                        ./images/img-7-354.jpg 1x,
+                                                        ./images/img-7-708.jpg 2x" type="image/jpeg"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                    ./images/img-7-370.webp 1x,
+                                    ./images/img-7-740.webp 2x" type="image/webp" media="(min-width: 1200px)">
+
+                                    <source srcset="
+                                ./images/img-7-370.jpg 1x,
+                                ./images/img-7-740.jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
+
+                                    <img src="./images/img-7-450.jpg" alt="Игорь Демьяненко" width="450" height="294">
+                                </picture>
                                 <p class="portfolio__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing
                                     elit.
                                     Error
                                     aliquam dolorum
-                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio provident
+                                    tenetur, est harum expedita voluptas asperiores impedit fugiat ab optio
+                                    provident
                                     soluta et iure laboriosam eius doloribus architecto vel.</p>
                             </div>
                             <div class="text">
@@ -223,9 +496,38 @@
 
                     </li>
                     <li class="portfolio__item item card-item">
+
                         <a class="link portfolio__link" href="" target="_blank" rel="noopener noreferrer">
-                            <div class="portfolio__thumb"><img src="./images/img8.jpg" alt="печать на ноутбуке"
-                                    width="370" height="294">
+                            <div class="portfolio__thumb">
+                                <picture>
+                                    <source srcset="
+                                ./images/img-8-450.webp 1x,
+                                ./images/img-8-900.webp 2x" type="image/webp" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                ./images/img-8-450.jpg 1x,
+                                ./images/img-8-900.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
+
+                                    <source srcset="
+                                                        ./images/img-8-354.webp 1x,
+                                                        ./images/img-8-708.webp 2x" type="image/webp"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                                        ./images/img-8-354.jpg 1x,
+                                                        ./images/img-8-708.jpg 2x" type="image/jpeg"
+                                        media="(min-width: 768px)">
+
+                                    <source srcset="
+                                    ./images/img-8-370.webp 1x,
+                                    ./images/img-8-740.webp 2x" type="image/webp" media="(min-width: 1200px)">
+
+                                    <source srcset="
+                                ./images/img-8-370.jpg 1x,
+                                ./images/img-8-740.jpg 2x" type="image/jpeg" media="(min-width: 1200px)">
+
+                                    <img src="./images/img-8-450.jpg" alt="Игорь Демьяненко" width="450" height="294">
+                                </picture>
                                 <p class="portfolio__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing
                                     elit.
                                     Error
@@ -246,7 +548,7 @@
     <!--footer-->
     <footer class="footer">
         <div class="container footer__container">
-            <div class="footer__column">
+            <div class="footer-item footer__column">
                 <a href="./index.html" class="logo link">Web<span class="logo--white">Studio</span></a>
                 <address class="address">
                     <ul class="address__list list">
@@ -262,7 +564,7 @@
                 </address>
             </div>
 
-            <div class="footer__column">
+            <div class=" footer-item footer__column">
                 <p class="connect__header">присоединяйтесь</p>
                 <ul class="social list">
                     <li class="social__item">
@@ -296,7 +598,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-form">
+            <div class="footer-item footer-form">
                 <p class="footer-form__header">Подпишитесь на рассылку</p>
                 <form class="footer-form--down">
                     <label class="input-mail" for="user-mail"><input id="user-mail" type="email" name="user-mail"
@@ -312,6 +614,12 @@
         </div>
 
     </footer>
+
+    <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
