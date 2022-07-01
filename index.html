@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="practice of CSS/HTML">
     <title>WebStudio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
@@ -15,40 +17,78 @@
 <body>
     <!--Shapka-->
     <header class="header">
-        <div class="header__container container">
+        <div class="container header__container ">
             <a href="./index.html" class="logo link">Web<span class="logo--black">Studio</span></a>
 
-            <nav class="nav">
-                <ul class="site-nav list">
-                    <li class="item site-nav__item "><a class="link site-nav__link current"
-                            href="./index.html">Студия</a>
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="icon-menu" width="19" height="19">
+                    <use href="./images/icons/sprite.svg#icon-menu_24px"></use>
+                </svg>
+            </button>
+
+
+            <div class="menu-container js-menu-container" id="mobile-menu">
+                <button class="menu-toggle js-close-menu">
+                    <svg class="icon-menu" width="19" height="19">
+                        <use href="./images/icons/sprite.svg#icon-close_24px"></use>
+                    </svg>
+                </button>
+
+                <nav class="nav">
+                    <ul class="site-nav list">
+                        <li class="site-nav__item site-nav__item "><a class="link site-nav__link"
+                                href="./index.html">Студия</a>
+                        </li>
+                        <li class="site-nav__item site-nav__item "><a class="link site-nav__link"
+                                href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="site-nav__item site-nav__item "><a class="link site-nav__link" href="">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="list contacts-nav">
+                    <li class="item contacts-nav__item">
+
+
+                        <a class="link contacts-nav__link" href="mailto:info@devstudio.com"><svg
+                                class="contacts-nav__icon" width="16" height="12">
+                                <use href="./images/icons/sprite.svg#icon-envelope">
+                                </use>
+                            </svg>
+                            info@devstudio.com</a>
+
                     </li>
-                    <li class="item site-nav__item "><a class="link site-nav__link current"
-                            href="./portfolio.html">Портфолио</a>
+
+                    <li class="item contacts-nav__item">
+                        <a class="link contacts-nav__link" href="tel:+0961111111"><svg class="contacts-nav__icon"
+                                width="10" height="16">
+                                <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+                            </svg>+38 096 111 1111 </a>
                     </li>
-                    <li class="item site-nav__item "><a class="link site-nav__link current" href="">Контакты</a></li>
                 </ul>
-            </nav>
-            <ul class="list contacts-nav">
-                <li class="item contacts-nav__item">
 
 
-                    <a class="link contacts-nav__link" href="mailto:info@devstudio.com"><svg class="contacts-nav__icon"
-                            width="16" height="12">
-                            <use href="./images/icons/sprite.svg#icon-envelope">
-                            </use>
-                        </svg>
-                        info@devstudio.com</a>
 
-                </li>
 
-                <li class="item contacts-nav__item">
-                    <a class="link contacts-nav__link" href="tel:+0961111111"><svg class="contacts-nav__icon" width="10"
-                            height="16">
-                            <use href="./images/icons/sprite.svg#icon-smartphone"></use>
-                        </svg>+38 096 111 1111 </a>
-                </li>
-            </ul>
+                <ul class="menu-social">
+                    <li class="menu-social__item">Instagram<a href="" target="_blank" rel="noopener noreferrer">
+                        </a>
+                    </li>
+                    <li class="menu-social__item">Twitter<a href="" target="_blank" rel="noopener noreferrer">
+
+                        </a>
+                    </li>
+                    <li class="menu-social__item">Facebook<a href="" target="_blank" rel="noopener noreferrer">
+                        </a>
+                    </li>
+                    <li class="menu-social__item">LinkedIn<a href="" target="_blank" rel="noopener noreferrer">
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
         </div>
     </header>
     <!--Main-->
@@ -97,16 +137,15 @@
                                     id="policy">
 
                                 <label for="policy" class="form-footer__policy"><span
-                                        class="form-footer__new-checkbox"></span> Соглашаюсь с
-                                    рассылкой и принимаю <a class="form-footer__link" href=""> Условия
-                                        договора</a></label>
+                                        class="form-footer__new-checkbox"></span>
+                                    <span class="form-footer__paragraph">Соглашаюсь с рассылкой и принимаю</span>
+                                    <a class="form-footer__link" href=""> Условия договора</a>
+                                </label>
                                 <button class="btn form__btn" type="submit">Відправити</button>
                             </div>
 
                         </form>
-
                     </div>
-
                 </div>
                 <button class="btn" data-modal-open type="button">Заказать услугу</button>
             </div>
@@ -171,22 +210,24 @@
                 <h2 class="work__title">Чем мы занимаемся</h2>
                 <ul class="work__list list card-set">
                     <li class="item work__item card-item">
-                        <div class="work__thumb"><img src="./images/box1.jpg" alt="працівник пише код" width="370"
-                                height="294">
+                        <div class="work__thumb"><img srcset="./images/box1-370.jpg 1x, ./images/box1-740.jpg 2x"
+                                src="./images/box1-370.jpg" alt="працівник пише код" width="370" height="294">
                             <h3 class="work__text">Десктопные приложения</h3>
                         </div>
                     </li>
 
                     <li class="item work__item card-item">
-                        <div class="work__thumb"><img src="./images/box2.jpg"
-                                alt="працівник вибирає макет для смартфону" width="370" height="294">
+                        <div class="work__thumb"><img srcset="./images/box2-370.jpg 1x, ./images/box2-740.jpg 2x"
+                                src="./images/box2-370.jpg" alt="працівник вибирає макет для смартфону" width="370"
+                                height="294">
                             <h3 class="work__text">Мобильные приложения</h3>
                         </div>
                     </li>
 
                     <li class="item work__item card-item">
-                        <div class="work__thumb"><img src="./images/box3.jpg" alt="працівник обирає колір з палітри"
-                                width="370" height="294">
+                        <div class="work__thumb"><img srcset="./images/box3-370.jpg 1x, ./images/box3-740.jpg 2x"
+                                src="./images/box3-370.jpg" alt="працівник обирає колір з палітри" width="370"
+                                height="294">
                             <h3 class="work__text">Дизайнерские решения</h3>
                         </div>
                     </li>
@@ -200,7 +241,39 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list list card-set">
                     <li class="team__item item card-item">
-                        <img src="./images/designer-red.jpg" alt="Игорь Демьяненко" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                            ./images/designer-red-450.webp 1x,
+                            ./images/designer-red-900.webp 2x" type="image/webp" media="(max-width: 767px)">
+
+                            <source srcset="
+                            ./images/designer-red-450.jpg 1x,
+                            ./images/designer-red-900.jpg 2x" type="image/jpeg" media="(max-width: 767px)">
+
+                            <source srcset="
+                                                                                    ./images/designer-red-354.webp 1x,
+                                                                                    ./images/designer-red-708.webp 2x"
+                                type="image/webp" media="(min-width: 768px)">
+
+                            <source srcset="
+                                                                                    ./images/designer-red-354.jpg 1x,
+                                                                                    ./images/designer-red-708.jpg 2x"
+                                type="image/jpeg" media="(min-width: 768px)">
+
+                            <source
+                                srcset="
+                                                                                        ./images/designer-red-270.webp 1x,
+                                                                                        ./images/designer-red-540.webp 2x"
+                                type="image/webp" media="(min-width: 1200px)">
+
+                            <source
+                                srcset="
+                                                                                        ./images/designer-red-270.jpg 1x,
+                                                                                        ./images/designer-red-540.jpg 2x"
+                                type="image/jpeg" media="(min-width: 1200px)">
+
+                            <img src="./images/designer-red-450.jpg" alt="Игорь Демьяненко" width="450" height="460">
+                        </picture>
                         <div class="team__text">
                             <h3 class="primary-title">Игорь Демьяненко</h3>
                             <p lang="en" class="team__paragraph">Product Designer</p>
@@ -240,8 +313,53 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="item card-item">
-                        <img src="./images/developer.jpg" alt="Ольга Репина" width="270" height="260">
+                    <li class="team__item item card-item">
+                        <picture>
+                            <source srcset="
+                                                                        ./images/developer-450.webp 1x,
+                                                                        ./images/developer-900.webp 2x"
+                                type="image/webp" media="(max-width: 767px)">
+
+                            <source srcset="
+                                                                        ./images/developer-450.jpg 1x,
+                                                                        ./images/developer-900.jpg 2x"
+                                type="image/jpeg" media="(max-width: 767px)">
+
+                            <source
+                                srcset="
+                                                                                                                                ./images/developer-354.webp 1x,
+                                                                                                                                ./images/developer-708.webp 2x"
+                                type="image/webp" media="(min-width: 768px)">
+
+                            <source
+                                srcset="
+                                                                                                                                ./images/developer-354.jpg 1x,
+                                                                                                                                ./images/developer-708.jpg 2x"
+                                type="image/jpeg" media="(min-width: 768px)">
+
+                            <source
+                                srcset="
+                                                                                                                                    ./images/developer-270.webp 1x,
+                                                                                                                                    ./images/developer-540.webp 2x"
+                                type="image/webp" media="(min-width: 1200px)">
+
+                            <source
+                                srcset="
+                                                                                                                                    ./images/developer-270.jpg 1x,
+                                                                                                                                    ./images/developer-540.jpg 2x"
+                                type="image/jpeg" media="(min-width: 1200px)">
+
+                            <img src="./images/developer-450.jpg" alt="Игорь Демьяненко" width="450" height="460">
+                        </picture>
+
+                        <!-- <img srcset="
+                    developer-270.jpg 270w,
+                            ./images/developer-354.jpg 354w, 
+                            ./images/developer-450.jpg 450w,
+                            ./images/developer-540.jpg 540w,
+                            ./images/developer-708.jpg 708w,
+                            ./images/developer-900.jpg 900w" src="./images/developer-270.jpg" alt="Ольга Репина"
+                            sizes=" (min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" width="270" height="260"> -->
                         <div class="team__text">
                             <h3 class="primary-title">Ольга Репина</h3>
                             <p lang="en" class="team__paragraph">Developer</p>
@@ -284,7 +402,51 @@
 
 
                     <li class="team__item item card-item">
-                        <img src="./images/marketing.jpg" alt="Николай Тарасов" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                                                                            ./images/marketing-450.webp 1x,
+                                                                            ./images/marketing-900.webp 2x"
+                                type="image/webp" media="(max-width: 767px)">
+
+                            <source srcset="
+                                                                            ./images/marketing-450.jpg 1x,
+                                                                            ./images/marketing-900.jpg 2x"
+                                type="image/jpeg" media="(max-width: 767px)">
+
+                            <source
+                                srcset="
+                                                                                                                                    ./images/marketing-354.webp 1x,
+                                                                                                                                    ./images/marketing-708.webp 2x"
+                                type="image/webp" media="(min-width: 768px)">
+
+                            <source
+                                srcset="
+                                                                                                                                    ./images/marketing-354.jpg 1x,
+                                                                                                                                    ./images/marketing-708.jpg 2x"
+                                type="image/jpeg" media="(min-width: 768px)">
+
+                            <source
+                                srcset="
+                                                                                                                                        ./images/marketing-270.webp 1x,
+                                                                                                                                        ./images/marketing-540.webp 2x"
+                                type="image/webp" media="(min-width: 1200px)">
+
+                            <source
+                                srcset="
+                                                                                                                                        ./images/marketing-270.jpg 1x,
+                                                                                                                                        ./images/marketing-540.jpg 2x"
+                                type="image/jpeg" media="(min-width: 1200px)">
+
+                            <img src="./images/marketing-450.jpg" alt="Игорь Демьяненко" width="450" height="460">
+                        </picture>
+                        <!-- <img srcset="
+                            ./images/marketing-270.jpg 270w,
+                            ./images/marketing-354.jpg 354w,
+                            ./images/marketing-450.jpg 450w,
+                            ./images/marketing-540.jpg 540w,
+                            ./images/marketing-708.jpg 708w,
+                            ./images/marketing-900.jpg 900w" src="./images/marketing-270.jpg" alt="Николай Тарасов"
+                            sizes=" (min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" width="270" height="260"> -->
                         <div class="team__text">
                             <h3 class="primary-title">Николай Тарасов</h3>
                             <p lang="en" class="team__paragraph">Marketing</p>
@@ -329,7 +491,52 @@
 
 
                     <li class="team__item item card-item">
-                        <img src="./images/designer-black.jpg" alt="Михаил Ермаков" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                                                                            ./images/designer-black-450.webp 1x,
+                                                                            ./images/designer-black-900.webp 2x"
+                                type="image/webp" media="(max-width: 767px)">
+
+                            <source srcset="
+                                                                            ./images/designer-black-450.jpg 1x,
+                                                                            ./images/designer-black-900.jpg 2x"
+                                type="image/jpeg" media="(max-width: 767px)">
+
+                            <source
+                                srcset="
+                                                                                                                                    ./images/designer-black-354.webp 1x,
+                                                                                                                                    ./images/designer-black-708.webp 2x"
+                                type="image/webp" media="(min-width: 768px)">
+
+                            <source
+                                srcset="
+                                                                                                                                    ./images/designer-black-354.jpg 1x,
+                                                                                                                                    ./images/designer-black-708.jpg 2x"
+                                type="image/jpeg" media="(min-width: 768px)">
+
+                            <source
+                                srcset="
+                                                                                                                                        ./images/designer-black-270.webp 1x,
+                                                                                                                                        ./images/designer-black-540.webp 2x"
+                                type="image/webp" media="(min-width: 1200px)">
+
+                            <source
+                                srcset="
+                                                                                                                                        ./images/designer-black-270.jpg 1x,
+                                                                                                                                        ./images/designer-black-540.jpg 2x"
+                                type="image/jpeg" media="(min-width: 1200px)">
+
+                            <img src="./images/designer-black-450.jpg" alt="Игорь Демьяненко" width="450" height="460">
+                        </picture>
+                        <!-- <img srcset="
+                            ./images/designer-black-270.jpg 270w,
+                            ./images/designer-black-354.jpg 354w,
+                            ./images/designer-black-450.jpg 450w,
+                            ./images/designer-black-540.jpg 540w,
+                            ./images/designer-black-708.jpg 708w,
+                            ./images/designer-black-900.jpg 900w" src="./images/designer-black-270.jpg"
+                            alt="Михаил Ермаков" sizes=" (min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                            width="270" height="260"> -->
                         <div class="team__text">
                             <h3 class="primary-title">Михаил Ермаков</h3>
                             <p lang="en" class="team__paragraph">Designer</p>
@@ -379,76 +586,66 @@
             <div class="container">
                 <h2 class="clients__title">Постоянные клиенты</h2>
                 <ul class="clients__list list card-set">
+
                     <li class="clients__item card-item">
-
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
-
-
                             <svg class="clients__logo" width="106" height="60">
                                 <use href="./images/icons/sprite.svg#icon-logo-5"></use>
                             </svg>
-
-
                         </a>
 
 
                     </li>
                     <li class="clients__item card-item">
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
-
-
                             <svg class="clients__logo" width="106" height="60">
                                 <use href="./images/icons/sprite.svg#icon-logo-4">
-
                                 </use>
                             </svg>
-
                         </a>
                     </li>
+
+
                     <li class="clients__item card-item">
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
-
                             <svg class="clients__logo" width="106" height="60">
                                 <use href="./images/icons/sprite.svg#icon-logo-3">
-
                                 </use>
                             </svg>
-
                         </a>
                     </li>
+
+
                     <li class="clients__item card-item">
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
-
                             <svg class="clients__logo" width="106" height="60">
                                 <use href="./images/icons/sprite.svg#icon-logo-2">
-
                                 </use>
                             </svg>
-
                         </a>
                     </li>
+
+
                     <li class="clients__item card-item">
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
-
                             <svg class="clients__logo" width="106" height="60">
                                 <use href="./images/icons/sprite.svg#icon-logo-1">
-
                                 </use>
                             </svg>
-
                         </a>
                     </li>
+
+
                     <li class="clients__item card-item">
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
-
                             <svg class="clients__logo" width="106" height="60">
                                 <use href="./images/icons/sprite.svg#icon-logo">
-
                                 </use>
                             </svg>
-
                         </a>
                     </li>
+
+
                 </ul>
             </div>
         </section>
@@ -456,7 +653,7 @@
     <!--Підвал-->
     <footer class="footer">
         <div class="container footer__container">
-            <div class="footer__column">
+            <div class="footer-item footer__column">
                 <a href="./index.html" class="logo link">Web<span class="logo--white">Studio</span></a>
                 <address class="address">
                     <ul class="address__list list">
@@ -472,7 +669,7 @@
                 </address>
             </div>
 
-            <div class="footer__column">
+            <div class=" footer-item footer__column">
                 <p class="connect__header">присоединяйтесь</p>
                 <ul class="social list">
                     <li class="social__item">
@@ -506,7 +703,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-form">
+            <div class="footer-item footer-form">
                 <p class="footer-form__header">Подпишитесь на рассылку</p>
                 <form class="footer-form--down">
                     <label class="input-mail" for="user-mail"><input id="user-mail" type="email" name="user-mail"
@@ -524,6 +721,26 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
+
 </body>
 
 </html>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+You have no unread notifications
